@@ -41,3 +41,46 @@ D:\Users\domin\repos\repos\ProjektPK4\ProjektPK4\bin\Windows\x86\Debug\Content\S
 D:\Users\domin\repos\repos\ProjektPK4\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Up2.xnb
 D:\Users\domin\repos\repos\ProjektPK4\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Up3.xnb
 D:\Users\domin\repos\repos\ProjektPK4\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Rock1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\box1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Box2.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\End1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Rock1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\box1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Box2.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\End1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Down1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Down2.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Down3.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Left1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Left2.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Left3.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Right1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Right2.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Right3.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Up1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Up2.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate1Up3.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Rock1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\ProjektPK4.exe
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\ProjektPK4.pdb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Debug\ProjektPK4.csprojAssemblyReference.cache
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Debug\ProjektPK4.csproj.CoreCompileInputs.cache
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Debug\ProjektPK4.csproj.CopyComplete
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Debug\ProjektPK4.exe
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Debug\ProjektPK4.pdb
