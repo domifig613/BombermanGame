@@ -16,12 +16,50 @@ namespace ProjektPK4.Content
         protected int controlTextures = 3;
         protected int SpeedTexture=0;
         protected int MaxTextureSpeed;
+        protected int delayBettwenPutBomb = 100;//frame
+        public int actuallDelayBomb { get; set; } = 0;//frame
         public int Speed { get; } = 5;
+        public int bombPower = 2;
 
         public Character(int posX, int posY,int width,int height ,int TexturSpeed) : base(posX, posY, width,height) {
             CharacterTextures = new Texture2D[3, 4];
             MaxTextureSpeed = TexturSpeed;
         }
+        //{ bomb
+        public Bomb PutBomb(int width, int height, int shade)
+        { 
+            actuallDelayBomb = delayBettwenPutBomb;
+            
+            int BombPosX;
+            int BombPosY;
+            if (GetPosX() % width >= width/2)
+            {
+                BombPosX = GetPosX() + width - (GetPosX() % width);
+            }
+            else
+            {
+                BombPosX = GetPosX() - (GetPosX() % width);
+            }
+            if (GetPosY() % height > height/2)
+            {
+                BombPosY = GetPosY() + height - GetPosY() % height;
+            }
+            else
+            {
+                BombPosY = GetPosY() - GetPosY() % height;
+            }
+
+            return new Bomb(BombPosX, BombPosY, width, height+shade, bombPower);
+        }
+        public void shortenTheDelay()
+        {
+            if (actuallDelayBomb > 0)
+            {
+                actuallDelayBomb--;
+            }
+        }
+        //}
+
 
         public void SetTexture(Texture2D texture, int x, int y)
         {
