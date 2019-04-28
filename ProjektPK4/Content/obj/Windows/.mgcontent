@@ -4,24 +4,82 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/box1.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Box2.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/End1.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Down1.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Down2.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Down3.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Left1.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Left2.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Left3.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Right1.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Right2.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Right3.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Up1.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Up2.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Pirate1Up3.png</File>
-    <File>D:/Users/domin/repos/repos/ProjektPK4/ProjektPK4/Content/Sprites/Rock1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb10.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb11.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb12.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb13.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb3.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb4.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb5.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb6.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb7.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb8.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb9.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/box1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Box2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/DeadFire.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/End1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireEndDown.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireEndLeft.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireEndRight.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireEndUp.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireMiddleLeftRight.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireMiddleUpDown.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireNormalStart.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartDown1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartDownLeft2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartDownRight2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartLeft1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartRight1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartUp1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartUpLeft2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartUpRight2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Down1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Down2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Down3.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Left1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Left2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Left3.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Right1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Right2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Right3.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Up1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Up2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Up3.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Rock1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

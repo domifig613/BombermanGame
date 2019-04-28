@@ -39,6 +39,15 @@ namespace ProjektPK4.Content
             Body.Y = Body.Y+posY;
         }
 
+        public bool chceckColision(int posX,int posXandBody,int posY, int posYandBody, int shade)
+        {
+            if(CheckColisionWidth(posX, posXandBody) && CheckColisionHeight(posY, posYandBody, shade))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public bool CheckColisionWidth(int posX, int posXAndBody)
         {
             if (posX > Body.X && posX < Body.X + Body.Width || posXAndBody > Body.X && posXAndBody < Body.X + Body.Width || posX == Body.X && posXAndBody == Body.X + Body.Width)

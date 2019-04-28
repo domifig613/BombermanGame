@@ -16,8 +16,8 @@ namespace ProjektPK4
         public int AreaYShade { get; } = 20;
         public int StartPositionSize { get; } = 3; //how much space free from box example 3 = 3x3 free space
         public int CharacterSlowerAnimation { get; } = 12; //higer = slower animation
-        public int CountOfNormalBox { get; } = 20;
-        public int CountOfPremiumBox { get; } = 5;
+        public int CountOfNormalBox { get; } = 50;
+        public int CountOfPremiumBox { get; } = 10;
 
     }
 }

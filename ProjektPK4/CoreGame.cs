@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace ProjektPK4
 {
@@ -17,11 +18,10 @@ namespace ProjektPK4
         SpriteBatch spriteBatch;//help draw textures
 
 
-
         public CoreGame() //konstrukotr
         {
-        
-           
+           TargetElapsedTime = TimeSpan.FromSeconds(1d / 60d); //frame rate 60
+
             graphics = new GraphicsDeviceManager(this); //tworzymy nowa aplikacje graphicDeviceManager
             Content.RootDirectory = "Content"; //folder gdzie szukamy tresci gry
 
@@ -53,19 +53,41 @@ namespace ProjektPK4
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-
             // TODO: use this.Content to load your game content here
+            LoadTexturesToMap();
+        }
 
+        private void LoadTexturesToMap()
+        {
+            string[] textureNameArray = { "End1", "Rock1", "Box1", "Box2", "Bomb1", "Bomb2",
+                "Bomb3", "Bomb4" ,"Bomb5","Bomb6","Bomb7","Bomb8","Bomb9","Bomb10","Bomb11",
+                "Bomb12","Bomb13","fireNormalStart","fireMiddleLeftRight","fireMiddleUpDown",
+                "fireEndUp","fireEndDown","fireEndLeft","fireEndRight","fireStartDown1",//3
+                "fireStartUp1","fireStartLeft1","fireStartRight1","fireStartDownLeft2",//8
+                "fireStartDownRight2","fireStartUpLeft2","fireStartUpRight2", "DeadFire"};//12
 
-            map.LoadTextureMap(Content.Load<Texture2D>("End1"), 0);
-            map.LoadTextureMap(Content.Load<Texture2D>("Rock1"), 1);
-            map.LoadTextureMap(Content.Load<Texture2D>("Box1"), 2);
-            map.LoadTextureMap(Content.Load<Texture2D>("Box2"), 3);
-          
-           // map.CreateRectangleInMap();
+            string name = "Sprites\\" + textureNameArray[0];
+            map.LoadTextureMap(Content.Load<Texture2D>(name), 0);
+            name = "Sprites\\" + textureNameArray[1];
+            map.LoadTextureMap(Content.Load<Texture2D>(name), 1);
+            name = "Sprites\\" + textureNameArray[2];
+            map.LoadTextureMap(Content.Load<Texture2D>(name), 2);
+            name = "Sprites\\" + textureNameArray[3];
+            map.LoadTextureMap(Content.Load<Texture2D>(name), 3);
+            
+            for(int i=0; i<13; i++)
+            {
+                name = "Sprites\\" + textureNameArray[i+4];
+                map.LoadTextureMap(Content.Load<Texture2D>(name), 4);
+            }
+
+            for(int i=0; i<16; i++)
+            {
+                name = "Sprites\\" + textureNameArray[i + 17];
+                map.LoadTextureMap(Content.Load<Texture2D>(name), 5);
+            }
 
             LoadCharacterTexture();
-
         }
 
         private void LoadCharacterTexture()
@@ -75,7 +97,7 @@ namespace ProjektPK4
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    string control = "Pirate1" + array[j] + (i + 1);
+                    string control = "Sprites\\Pirate1" + array[j] + (i + 1);
                     map.LoadTexturePlayer(Content.Load<Texture2D>(control), i, j);
                 }
             }
@@ -112,7 +134,7 @@ namespace ProjektPK4
         protected override void Draw(GameTime gameTime) //rysowanie, wiele razy na sekunde
         {
 
-            map.CheckMovePlayer(0);
+            map.MapChanges();
             map.SortObjectToDraw();
 
             GraphicsDevice.Clear(Color.Wheat); //kolor tla

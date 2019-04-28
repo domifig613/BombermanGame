@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
 
 namespace ProjektPK4.Content
 {
@@ -18,7 +15,9 @@ namespace ProjektPK4.Content
         private Texture2D RockTexture;//Rock texture
         private Texture2D MiddleRockTexture;//Rock2 texture
         private Texture2D BoxTexture;//Box texture
-        private Texture2D BoxWithBetterDropTexture;
+        private Texture2D BoxWithBetterDropTexture;//premium box texture
+        private List<Texture2D> BombTextures = new List<Texture2D>();//bomb texture
+        private List<Texture2D> FireTextures = new List<Texture2D>();
 
         private Player Player;
 
@@ -46,22 +45,17 @@ namespace ProjektPK4.Content
                 }
             }
 
-            for (int i = 0; i < GameParam.CountOfNormalBox; i++)
-            {
-                int RandPosX, RandPosY;
-                do
-                {
-                    RandPosX = rnd.Next((GameParam.WindowWidth / GameParam.OneAreaWidth) - 2);//random position x box
-                    RandPosX = RandPosX * GameParam.OneAreaWidth + (1 * GameParam.OneAreaWidth);
+            AddBoxes();
+            AddPremiumBoxes();
 
-                    RandPosY = rnd.Next((GameParam.WindowHeight / GameParam.OneAreaHeight) - 2);//random position y box
-                    RandPosY = (RandPosY * GameParam.OneAreaHeight + (1 * GameParam.OneAreaHeight)) + 0;//+0 because window start 0
-                }
-                while (CheckBoxPos(RandPosX, RandPosY));
+            Player = new Player(GameParam.OneAreaWidth, GameParam.OneAreaHeight, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, GameParam.CharacterSlowerAnimation);
 
-                ObjectToDraw.Add(new Box(RandPosX, RandPosY, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, 0.1f));
-            }
+            ObjectToDraw.Add(Player);
+            SortObjectToDraw();
+        }
 
+        private void AddPremiumBoxes()
+        {
             for (int i = 0; i < GameParam.CountOfPremiumBox; i++)
             {
                 int RandPosX, RandPosY;
@@ -77,11 +71,25 @@ namespace ProjektPK4.Content
 
                 ObjectToDraw.Add(new Box(RandPosX, RandPosY, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, 1f));
             }
+        }
 
-            Player = new Player(GameParam.OneAreaWidth, GameParam.OneAreaHeight, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, GameParam.CharacterSlowerAnimation);
+        private void AddBoxes()
+        {
+            for (int i = 0; i < GameParam.CountOfNormalBox; i++)
+            {
+                int RandPosX, RandPosY;
+                do
+                {
+                    RandPosX = rnd.Next((GameParam.WindowWidth / GameParam.OneAreaWidth) - 2);//random position x box
+                    RandPosX = RandPosX * GameParam.OneAreaWidth + (1 * GameParam.OneAreaWidth);
 
-            ObjectToDraw.Add(Player);
-            SortObjectToDraw();
+                    RandPosY = rnd.Next((GameParam.WindowHeight / GameParam.OneAreaHeight) - 2);//random position y box
+                    RandPosY = (RandPosY * GameParam.OneAreaHeight + (1 * GameParam.OneAreaHeight)) + 0;//+0 because window start 0
+                }
+                while (CheckBoxPos(RandPosX, RandPosY));
+
+                ObjectToDraw.Add(new Box(RandPosX, RandPosY, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, 0.1f));
+            }
         }
 
         bool CheckBoxPos(int posX, int posY)
@@ -120,6 +128,12 @@ namespace ProjektPK4.Content
                 case 3:
                     BoxWithBetterDropTexture = texture;
                     break;
+                case 4:
+                    BombTextures.Add(texture);
+                    break;
+                case 5:
+                    FireTextures.Add(texture);
+                    break;
                 default:
                     break;
             }
@@ -134,10 +148,10 @@ namespace ProjektPK4.Content
         {
             foreach (GameObject object1 in ObjectToDraw)
             {
-                if (object1.GetType() == typeof(Box))
+                if (object1 is Box)
                 {
-                    var AnotherBox = CastToType<Box>(object1);
-                    if (AnotherBox.GetChanceToDrop() == 1f)
+                    Box box1 = (Box)object1;
+                    if (box1.GetChanceToDrop() == 1f)
                     {
                         Batch.Draw(BoxWithBetterDropTexture, object1.GetRectangle(), Color.White);
 
@@ -147,13 +161,23 @@ namespace ProjektPK4.Content
                         Batch.Draw(BoxTexture, object1.GetRectangle(), Color.White);
                     }
                 }
-                else if (object1.GetType() == typeof(Player))
-                {
-                    Batch.Draw(Player.GetTexture(), Player.GetRectangle(), Color.White);
+                else if (object1 is Player)
+                { 
+                    Batch.Draw(Player.GetTexture(), object1.GetRectangle(), Color.White);
                 }
                 else if (object1.GetPosX() >= GameParam.WindowWidth - GameParam.OneAreaWidth || object1.GetPosX() < GameParam.OneAreaWidth || object1.GetPosY() >= GameParam.WindowHeight - (GameParam.OneAreaWidth + GameParam.AreaYShade) || object1.GetPosY() < GameParam.OneAreaHeight)
                 {
                     Batch.Draw(RockTexture, object1.GetRectangle(), Color.White);
+                }
+                else if (object1 is Bomb)
+                {
+                    Bomb bomb1 = (Bomb)object1;
+                    Batch.Draw(BombTextures[bomb1.getTextureNumber()], object1.GetRectangle(), Color.White);
+                }
+                else if(object1 is Fire)
+                {
+                    Fire fire1 = (Fire)object1;
+                    Batch.Draw(FireTextures[fire1.GetTextureNumber()], object1.GetRectangle(), Color.White);
                 }
                 else
                 {
@@ -162,23 +186,33 @@ namespace ProjektPK4.Content
             }
         }
 
-        public T CastToType<T>(object objType) where T : class
-        {
-            var cast = objType as T;
-
-            if (cast == null)
-                throw new InvalidCastException();
-
-            return cast;
-        }
-
         public void SortObjectToDraw()
         {
+            Character character1=null;
+            for (int i = ObjectToDraw.Count - 1; i >= 0; i--)
+            {
+                if(ObjectToDraw[i] is Character)
+                {
+                    character1 = (Character)ObjectToDraw[i];
+                    ObjectToDraw.Remove(ObjectToDraw[i]);
+                }
+            }
             ObjectToDraw.Sort((x, y) => x.GetPosY().CompareTo(y.GetPosY()));
+            if (character1 != null)
+            {
+                for (int i = 0; i < ObjectToDraw.Count; i++)
+                {
+                    if (ObjectToDraw[i].GetPosY() > character1.GetPosY())
+                    {
+                        ObjectToDraw.Insert(i, character1);
+                        break;
+                    }
+                }
+            }
         }
 
         //{     //try move for every object
-        public void CheckMovePlayer(int control)
+        private void CheckMovePlayer(int control)
         {
             if (Keyboard.GetState().IsKeyDown(Player.GetKey(0)) && control == 0 || control == 1)//up
             {
@@ -198,18 +232,120 @@ namespace ProjektPK4.Content
             }
         } //1
 
+        public void MapChanges()
+        {
+            Player.shortenTheDelay();
+            PutBomb();
+
+            CheckMovePlayer(0);
+
+            CheckTimerBomb();
+            ChceckTimeFire();
+            CheckBurnObject();
+        }
+
+        private void CheckBurnObject()
+        {
+            List<Fire> fire = new List<Fire>();
+            for (int i = ObjectToDraw.Count - 1; i >= 0; i--)
+            {
+                if (ObjectToDraw[i] is Fire)
+                {
+                    Fire fire1 = (Fire)ObjectToDraw[i];
+                    ObjectToDraw.Remove(ObjectToDraw[i]);
+                    fire.Add(fire1);
+                }
+            }
+            for(int i= fire.Count-1; i>=0; i--)
+            {
+                fire[i].BurnObject(ref ObjectToDraw, GameParam.AreaYShade);
+            }
+            for(int i=fire.Count-1; i>=0; i--)
+            {
+                ObjectToDraw.Add(fire[i]);
+            }
+        }
+
+        private void ChceckTimeFire()
+        {
+            for (int i = ObjectToDraw.Count - 1; i >= 0; i--)
+            {
+                if(ObjectToDraw[i] is Fire)
+                {
+                    Fire fire1 = (Fire)ObjectToDraw[i];
+                    fire1.shorterTimeToEndFire();
+                    if(fire1.GetTimeToEndFire() <=0)
+                    {
+                        ObjectToDraw.Remove(ObjectToDraw[i]);
+                    }
+                }
+            }
+        }
+
+        private void PutBomb()
+        {
+            if (Keyboard.GetState().IsKeyDown(Player.GetKey(4)) && Player.actuallDelayBomb == 0)
+            {
+                ObjectToDraw.Add(Player.PutBomb(GameParam.OneAreaWidth, GameParam.OneAreaHeight, GameParam.AreaYShade));
+            }            
+        }
+
+        private void CheckTimerBomb()
+        {
+            for(int i=ObjectToDraw.Count-1; i>=0; i--)
+            { 
+                if(ObjectToDraw[i] is Bomb)
+                {
+                    Bomb bomb1 = (Bomb)ObjectToDraw[i];
+                    bomb1.shortenTheTimer();
+                    if (bomb1.getTimer() % ((int)(bomb1.getMaxTime() / (BombTextures.Count))+1) == 0 && bomb1.getMaxTime() != bomb1.getTimer())
+                    {
+                        bomb1.SetNextTexture();
+                    }
+                    if (bomb1.checkDestroyTimer())
+                    {
+                        int[] DistanceArray= {0,0,0,0 };
+                        DistanceArray[0] = bomb1.GetPosY() - FindObjectWithLowerY(bomb1.GetPosX(), bomb1.GetPosY()).GetPosY();
+                        DistanceArray[1] = FindObjectWithHigherY(bomb1.GetPosX(), bomb1.GetPosY()).GetPosY()- bomb1.GetPosY();
+                        DistanceArray[2] = bomb1.GetPosX() - FindObjectWithLowerX(bomb1.GetPosX(), bomb1.GetPosY()).GetPosX();
+                        DistanceArray[3] = FindObjectWithHigherX(bomb1.GetPosX(), bomb1.GetPosY()).GetPosX() - bomb1.GetPosX();
+
+                        bool[] Destroyable = {false,false,false,false};
+                        if(FindObjectWithLowerY(bomb1.GetPosX(), bomb1.GetPosY()) is Box || FindObjectWithLowerY(bomb1.GetPosX(), bomb1.GetPosY()) is Character || FindObjectWithLowerY(bomb1.GetPosX(), bomb1.GetPosY()) is Bomb)
+                        {
+                            Destroyable[0] = true;
+                        }
+                        if (FindObjectWithHigherY(bomb1.GetPosX(), bomb1.GetPosY()) is Box || FindObjectWithHigherY(bomb1.GetPosX(), bomb1.GetPosY()) is Character || FindObjectWithHigherY(bomb1.GetPosX(), bomb1.GetPosY()) is Bomb)
+                        {
+                            Destroyable[1] = true;
+                        }
+                        if (FindObjectWithLowerX(bomb1.GetPosX(), bomb1.GetPosY()) is Box || FindObjectWithLowerX(bomb1.GetPosX(), bomb1.GetPosY()) is Character || FindObjectWithLowerX(bomb1.GetPosX(), bomb1.GetPosY()) is Bomb)
+                        {
+                            Destroyable[2] = true;
+                        }
+                        if (FindObjectWithHigherX(bomb1.GetPosX(), bomb1.GetPosY()) is Box || FindObjectWithHigherX(bomb1.GetPosX(), bomb1.GetPosY()) is Character || FindObjectWithHigherX(bomb1.GetPosX(), bomb1.GetPosY()) is Bomb)
+                        {
+                            Destroyable[3] = true;
+                        }
+
+                        bomb1.DestroyBombCreateFire(ref ObjectToDraw, GameParam.OneAreaWidth, GameParam.OneAreaHeight, DistanceArray, Destroyable);
+                        ObjectToDraw.RemoveAt(i);
+                    }
+                }    
+            }
+        }
         private void CheckMoveUp(int control)
         {
             GameObject closerObject = FindObjectWithLowerY(Player.GetPosX(), Player.GetPosY());
             int distance = Player.GetPosY() - (closerObject.GetPosY() + GameParam.OneAreaHeight);
 
-            if (distance > Player.Speed)
+            if (distance > Player.Speed || closerObject is Fire)
             {
                 Player.MoveCharacter(0, -Player.Speed, 0);
             }
-            else if (distance > 0)
+            else if (distance > 0 || closerObject is Fire)
             {
-                Player.MoveBody(0, -distance);
+                Player.MoveCharacter(0, -distance, 0);
             }
             else if (control == 0)
             {
@@ -221,13 +357,13 @@ namespace ProjektPK4.Content
             GameObject closerObject = FindObjectWithHigherY(Player.GetPosX(), Player.GetPosY());
             int distance = closerObject.GetPosY() - (Player.GetPosY() + GameParam.OneAreaHeight);
 
-            if (distance > Player.Speed)
+            if (distance > Player.Speed || closerObject is Fire)
             {
                 Player.MoveCharacter(0, Player.Speed, 3);
             }
-            else if (distance > 0)
+            else if (distance > 0 || closerObject is Fire)
             {
-                Player.MoveBody(0, distance);
+                Player.MoveCharacter(0, distance, 3);
             }
             else if (control == 0)
             {
@@ -238,13 +374,13 @@ namespace ProjektPK4.Content
         {
             GameObject closerObject = FindObjectWithLowerX(Player.GetPosX(), Player.GetPosY());
             int distance = Player.GetPosX() - (closerObject.GetPosX() + GameParam.OneAreaWidth);
-            if (distance > Player.Speed)
+            if (distance > Player.Speed || closerObject is Fire)
             {
                 Player.MoveCharacter(-Player.Speed, 0, 6);
             }
-            else if (distance > 0)
+            else if (distance > 0 || closerObject is Fire)
             {
-                Player.MoveBody(-distance, 0);
+                Player.MoveCharacter(-distance, 0, 6);
             }
             else if (control == 0)
             {
@@ -254,15 +390,15 @@ namespace ProjektPK4.Content
         }
         private void CheckMoveRight(int control)
         {
-            GameObject closerObject = FindObjectWithHigerX(Player.GetPosX(), Player.GetPosY());
+            GameObject closerObject = FindObjectWithHigherX(Player.GetPosX(), Player.GetPosY());
             int distance = closerObject.GetPosX() - (Player.GetPosX() + GameParam.OneAreaWidth);
-            if (distance > Player.Speed)
+            if (distance > Player.Speed || closerObject is Fire)
             {
                 Player.MoveCharacter(Player.Speed, 0, 9);
             }
-            else if (distance > 0)
+            else if (distance > 0 || closerObject is Fire)
             {
-                Player.MoveBody(distance, 0);
+                Player.MoveCharacter(distance, 0, 9);
             }
             else if (control == 0)
             {
@@ -270,7 +406,7 @@ namespace ProjektPK4.Content
             }
         }
 
-        private GameObject FindObjectWithHigerX(int posX, int posY)
+        private GameObject FindObjectWithHigherX(int posX, int posY)
         {
             GameObject objectReturn = new GameObject(GameParam.WindowWidth, 0, 1, 1);
             foreach (GameObject object1 in ObjectToDraw)
@@ -328,7 +464,7 @@ namespace ProjektPK4.Content
                 {
                     CheckMovePlayer(3);
                 }
-                else if (position > 0 && FindObjectWithHigerX(closerObject.GetPosX(), closerObject.GetPosY()).GetPosX() - GameParam.OneAreaWidth > closerObject.GetPosX())
+                else if (position > 0 && FindObjectWithHigherX(closerObject.GetPosX(), closerObject.GetPosY()).GetPosX() - GameParam.OneAreaWidth > closerObject.GetPosX())
                 {
                     CheckMovePlayer(4);
                 }
