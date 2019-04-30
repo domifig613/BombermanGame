@@ -20,5 +20,10 @@ namespace ProjektPK4.Content
         {
             return chanceDropPowerups;
         }
+
+        public Powerups TrySpawnPowerup()
+        {
+            return new Powerups(10,1, GetPosX(), GetPosY(), GetRectangle().Width, GetRectangle().Height);
+        }
     }
 }
