@@ -13,9 +13,9 @@ namespace ProjektPK4.Content
     {
         private Rectangle Body;
 
-        public GameObject(int positionX, int positionY, int width, int height)
+        public GameObject(int positionX, int positionY, int Width, int height)
         {
-            Body = new Rectangle(positionX, positionY, width, height);
+            Body = new Rectangle(positionX, positionY, Width, height);
         }
 
         public Rectangle GetRectangle()

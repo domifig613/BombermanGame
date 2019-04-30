@@ -66,6 +66,7 @@
     <Compile Include="Content\GameObject.cs" />
     <Compile Include="Content\Map.cs" />
     <Compile Include="Content\Player.cs" />
+    <Compile Include="Content\Powerups.cs" />
     <Compile Include="Content\ProgramParameters.cs" />
     <Compile Include="CoreGame.cs" />
     <Compile Include="Program.cs" />

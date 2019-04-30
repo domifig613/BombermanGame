@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32.SafeHandles;
+using System;
 using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -17,7 +18,7 @@ namespace ProjektPK4.Content
         private int maxTimeToDestroy = 120;
         private int timerToDestroy;//frame
         int textureNumber = 0;
-        public Bomb(int posX, int posY, int width, int height, int _range) : base(posX, posY, width, height)
+        public Bomb(int posX, int posY, int Width, int height, int _range) : base(posX, posY, Width, height)
         {
             timerToDestroy = maxTimeToDestroy;
             range = _range;
@@ -50,9 +51,9 @@ namespace ProjektPK4.Content
             return false;
         }
 
-        public void DestroyBombCreateFire(ref List<GameObject> fireList, int width, int height, int[] distance, bool[] destroyable)
+        public void DestroyBombCreateFire(ref List<GameObject> fireList, int Width, int height, int[] distance, bool[] destroyable)
         {
-            fireList.Add(new Fire(range, GetPosX(), GetPosY(), width, height, ref fireList, distance, destroyable));
+            fireList.Add(new Fire(range, GetPosX(), GetPosY(), Width, height, ref fireList, distance, destroyable));
         }
 
         public int getTextureNumber()

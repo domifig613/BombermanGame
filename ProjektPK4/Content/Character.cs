@@ -21,24 +21,24 @@ namespace ProjektPK4.Content
         public int Speed { get; } = 5;
         public int bombPower = 2;
 
-        public Character(int posX, int posY,int width,int height ,int TexturSpeed) : base(posX, posY, width,height) {
+        public Character(int posX, int posY,int Width,int height ,int TexturSpeed) : base(posX, posY, Width,height) {
             CharacterTextures = new Texture2D[3, 4];
             MaxTextureSpeed = TexturSpeed;
         }
         //{ bomb
-        public Bomb PutBomb(int width, int height, int shade)
+        public Bomb PutBomb(int Width, int height, int shade)
         { 
             actuallDelayBomb = delayBettwenPutBomb;
             
             int BombPosX;
             int BombPosY;
-            if (GetPosX() % width >= width/2)
+            if (GetPosX() % Width >= Width/2)
             {
-                BombPosX = GetPosX() + width - (GetPosX() % width);
+                BombPosX = GetPosX() + Width - (GetPosX() % Width);
             }
             else
             {
-                BombPosX = GetPosX() - (GetPosX() % width);
+                BombPosX = GetPosX() - (GetPosX() % Width);
             }
             if (GetPosY() % height > height/2)
             {
@@ -49,7 +49,7 @@ namespace ProjektPK4.Content
                 BombPosY = GetPosY() - GetPosY() % height;
             }
 
-            return new Bomb(BombPosX, BombPosY, width, height+shade, bombPower);
+            return new Bomb(BombPosX, BombPosY, Width, height+shade, bombPower);
         }
         public void shortenTheDelay()
         {

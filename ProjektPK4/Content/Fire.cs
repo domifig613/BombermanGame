@@ -12,35 +12,35 @@ namespace ProjektPK4.Content
         int MaxTimeToEndFire = 20;//frame
         int TextureNumber;
 
-        public Fire(int power, int positionX, int positionY, int width, int height, ref List<GameObject> fireList,
-            int[] Distance, bool[] Destroyable) : base(positionX, positionY, width, height)//use in bomb, middle fire
+        public Fire(int power, int positionX, int positionY, int Width, int height, ref List<GameObject> fireList,
+            int[] Distance, bool[] Destroyable) : base(positionX, positionY, Width, height)//use in bomb, middle fire
         {
             TimeToEndFire = MaxTimeToEndFire;
-            FindGoodTextureNumberForStart(Distance, Destroyable, width,height);
+            FindGoodTextureNumberForStart(Distance, Destroyable, Width,height);
 
             if (Distance[0] > height || Destroyable[0] == true)
             {
-                fireList.Add(new Fire(power - 1, 1, positionX, positionY - height, width, height, Distance[0]-height, Destroyable[0], ref fireList));
+                fireList.Add(new Fire(power - 1, 1, positionX, positionY - height, Width, height, Distance[0]-height, Destroyable[0], ref fireList));
             }
             if (Distance[1] > height || Destroyable[1] == true)
             {
-                fireList.Add(new Fire(power - 1, 2, positionX, positionY + height, width, height, Distance[1] - height, Destroyable[1], ref fireList));
+                fireList.Add(new Fire(power - 1, 2, positionX, positionY + height, Width, height, Distance[1] - height, Destroyable[1], ref fireList));
             }
-            if (Distance[2] > width || Destroyable[2] == true)
+            if (Distance[2] > Width || Destroyable[2] == true)
             {
-                fireList.Add(new Fire(power - 1, 3, positionX - width, positionY, width, height, Distance[2] - width, Destroyable[2], ref fireList));
+                fireList.Add(new Fire(power - 1, 3, positionX - Width, positionY, Width, height, Distance[2] - Width, Destroyable[2], ref fireList));
             }
-            if (Distance[3] > width || Destroyable[3] == true)
+            if (Distance[3] > Width || Destroyable[3] == true)
             {
-                fireList.Add(new Fire(power - 1, 4, positionX + width, positionY , width, height, Distance[3] - width, Destroyable[3], ref fireList));
+                fireList.Add(new Fire(power - 1, 4, positionX + Width, positionY , Width, height, Distance[3] - Width, Destroyable[3], ref fireList));
             }
         }
 
-        public Fire(int power, int FireDirection, int positionX, int positionY, int width, int height, int distance, bool destroyable,
-           ref List<GameObject> fireList) : base(positionX, positionY, width, height)//use in first fire constructor or recursion
+        public Fire(int power, int FireDirection, int positionX, int positionY, int Width, int height, int distance, bool destroyable,
+           ref List<GameObject> fireList) : base(positionX, positionY, Width, height)//use in first fire constructor or recursion
         {
             TimeToEndFire = MaxTimeToEndFire;
-            if (power == 0 || distance <= 0 || distance == width && destroyable == false)
+            if (power == 0 || distance <= 0 || distance == Width && destroyable == false)
             {
                 switch (FireDirection)
                 {
@@ -73,22 +73,22 @@ namespace ProjektPK4.Content
                         TextureNumber = 2;
                         break;
                     case 3:
-                        positionX -= width;
-                        distance -= width;
+                        positionX -= Width;
+                        distance -= Width;
                         TextureNumber = 1;
                         break;
                     case 4:
-                        positionX += width;
-                        distance -= width;
+                        positionX += Width;
+                        distance -= Width;
                         TextureNumber = 1;
                         break;
                 }
 
-                fireList.Add(new Fire(power - 1, FireDirection, positionX, positionY, width, height, distance, destroyable, ref fireList));
+                fireList.Add(new Fire(power - 1, FireDirection, positionX, positionY, Width, height, distance, destroyable, ref fireList));
             }
         }//fire direction 1 up, 2 down, 3 left, 4 right
 
-        public Fire(int positionX, int positionY, int width, int height) :base(positionX, positionY, width, height)
+        public Fire(int positionX, int positionY, int Width, int height) :base(positionX, positionY, Width, height)
         {
             TextureNumber = 15;
             TimeToEndFire = MaxTimeToEndFire;
@@ -98,12 +98,19 @@ namespace ProjektPK4.Content
         public void BurnObject(ref List<GameObject> fireList, int shade)
         {
             for (int i = fireList.Count - 1; i >= 0; i--)
-            { 
-                if (fireList[i].GetPosX() == GetPosX() && fireList[i].GetPosY() ==GetPosY() && !(fireList[i] is Fire))
+            {
+                if (MaxTimeToEndFire-1 == TimeToEndFire && fireList[i].GetPosX() == GetPosX() && fireList[i].GetPosY() ==GetPosY() && !(fireList[i] is Fire))
                 { 
                     if (fireList[i] is Box || fireList[i] is Bomb || fireList[i] is Character)
                     {
-                        if (fireList[i] is Bomb)
+                        if(fireList[i] is Box)
+                        {
+                            Box box1 = (Box)fireList[i];
+                            fireList.Add(box1.TrySpawnPowerup());
+                            fireList.Remove(box1);
+                            
+                        }
+                        else if (fireList[i] is Bomb)
                         {
                             Bomb bomb1 = (Bomb)fireList[i];
                             bomb1.setTimeToZero();
@@ -128,7 +135,7 @@ namespace ProjektPK4.Content
             }
         }
 
-        private void FindGoodTextureNumberForStart(int[] Distance, bool[] Destroyable, int width, int height)
+        private void FindGoodTextureNumberForStart(int[] Distance, bool[] Destroyable, int Width, int height)
         {
             List<int> posibleNumber= new List<int>();
             for(int i=0; i<15; i++)
@@ -158,7 +165,7 @@ namespace ProjektPK4.Content
                 DeleteBadTextrueNumber(ref posibleNumber, numberToRemove2);
             }
 
-            if (Distance[2] != width || Destroyable[2] ==true)//left
+            if (Distance[2] != Width || Destroyable[2] ==true)//left
             {
 
                 int[] numberToRemove3 = { 2, 3, 4, 5, 9, 11, 13 };
@@ -170,7 +177,7 @@ namespace ProjektPK4.Content
                 DeleteBadTextrueNumber(ref posibleNumber, numberToRemove3);
             }
 
-            if (Distance[3] != width || Destroyable[3] ==true)//right
+            if (Distance[3] != Width || Destroyable[3] ==true)//right
             {
                 int[] numberToRemove4 = { 2, 3, 4, 6, 10, 12, 14 };
                 DeleteBadTextrueNumber(ref posibleNumber, numberToRemove4);

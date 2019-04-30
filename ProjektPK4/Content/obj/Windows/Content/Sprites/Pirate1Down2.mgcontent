@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Down2.png</SourceFile>
-  <SourceTime>2019-03-27T11:44:28.2035503+01:00</SourceTime>
+  <SourceTime>2019-04-28T16:22:27+02:00</SourceTime>
   <DestFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/bin/Windows/Content/Sprites/Pirate1Down2.xnb</DestFile>
-  <DestTime>2019-04-10T13:15:43.2724016+02:00</DestTime>
+  <DestTime>2019-04-28T16:53:32.3913563+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

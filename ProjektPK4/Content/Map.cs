@@ -18,6 +18,8 @@ namespace ProjektPK4.Content
         private Texture2D BoxWithBetterDropTexture;//premium box texture
         private List<Texture2D> BombTextures = new List<Texture2D>();//bomb texture
         private List<Texture2D> FireTextures = new List<Texture2D>();
+        private List<Texture2D> PowerupsTexturesBomb = new List<Texture2D>();
+
 
         private Player Player;
 
@@ -134,6 +136,9 @@ namespace ProjektPK4.Content
                 case 5:
                     FireTextures.Add(texture);
                     break;
+                case 6:
+                    PowerupsTexturesBomb.Add(texture);
+                    break;
                 default:
                     break;
             }
@@ -178,6 +183,11 @@ namespace ProjektPK4.Content
                 {
                     Fire fire1 = (Fire)object1;
                     Batch.Draw(FireTextures[fire1.GetTextureNumber()], object1.GetRectangle(), Color.White);
+                }
+                else if(object1 is Powerups)
+                {
+                    Powerups powerups1 = (Powerups)object1;
+                    Batch.Draw(PowerupsTexturesBomb[powerups1.getNumberTexture()], object1.GetRectangle(), Color.White);
                 }
                 else
                 {
@@ -278,6 +288,11 @@ namespace ProjektPK4.Content
                     {
                         ObjectToDraw.Remove(ObjectToDraw[i]);
                     }
+                }
+                else if(ObjectToDraw[i] is Powerups)
+                {
+                    Powerups powerups1 = (Powerups)ObjectToDraw[i];
+                    powerups1.setNextTexture();
                 }
             }
         }
