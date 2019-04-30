@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/Sprites/fireEndDown.png</SourceFile>
-  <SourceTime>2019-04-28T16:35:42.1490526+02:00</SourceTime>
-  <DestFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/bin/Windows/Content/Sprites/fireEndDown.xnb</DestFile>
-  <DestTime>2019-04-28T16:37:23.0757173+02:00</DestTime>
+  <SourceFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireEndDown.png</SourceFile>
+  <SourceTime>2019-04-26T09:25:01.6196271+02:00</SourceTime>
+  <DestFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/bin/Windows/Content/Sprites/fireEndDown.xnb</DestFile>
+  <DestTime>2019-04-30T19:55:43.4384249+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
