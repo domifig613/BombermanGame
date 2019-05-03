@@ -10,33 +10,73 @@ namespace ProjektPK4.Content
     {
         int indestructible;//cant destroy and pick frame
         int textureNumber = 0;
-        int type;//1 more bombs, 2 speed, 3 larger area bomb
+        int frameWithOneTexture;
+        int countTexture=0;
+        int type;//1 more bombs, 2 large area bomb, 3 speed, 4 indestructible for some frame
 
-        public Powerups(int _indestructibleTime,int _type, int posX, int posY, int Width, int height):base(posX, posY, Width, height)
+        public Powerups(int _indestructibleTime,int _type, int _frameWithOneTexture, int posX, int posY, int Width, int height):base(posX, posY, Width, height)
         {
+            frameWithOneTexture = _frameWithOneTexture;
             indestructible = _indestructibleTime;
             type = _type;
         }
-        public void setNextTexture()
+        public void setNextTexture(int max)
         {
-            if (textureNumber == 17*4)
+            if(countTexture % frameWithOneTexture == 0)
             {
-                textureNumber = 0;
+                countTexture = 1;
+                if (textureNumber == max - 1)
+                {
+                    textureNumber = 0;
+                }
+                else
+                {
+                    textureNumber++;
+                }
             }
             else
             {
-                textureNumber++;
+                countTexture++;
             }
         }
 
-        public int getType()
+        public int getTypePowerups()
         {
             return type;
         }
 
         public int getNumberTexture()
         {
-            return textureNumber/4;
+            return textureNumber;
+        }
+
+        public int getIndestructible()
+        {
+            return indestructible;
+        }
+        public void IndestructibleDecrement()
+        {
+            if (indestructible > 0)
+            {
+                indestructible--;
+            }
+        }
+        public void AddPower(Character player)
+        {
+            switch (type)
+            {
+                case 1:
+                    player.ShortenMaxDelayBettwenPutBomb();
+                    break;
+                case 2:
+                    player.AddBombPower();
+                    break;
+                case 3:
+                    player.AddSpeed();
+                    break;
+                case 4:
+                    break;
+            }
         }
     }
 }

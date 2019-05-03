@@ -11,9 +11,16 @@ namespace ProjektPK4.Content
 {
     class Player : Character
     {
-        Keys[] MoveKeys = { Keys.Up, Keys.Down, Keys.Left, Keys.Right, Keys.C};
+        Keys[] MoveKeys= new Keys[5];
         
-        public Player(int posX, int posY,int Width,int height ,int speedTexture) : base(posX, posY,Width,height ,speedTexture) {}
+        public Player(int posX, int posY,int Width,int height ,int speedTexture, Keys up, Keys down, Keys left, Keys right, Keys bomb) : base(posX, posY,Width,height ,speedTexture)
+        {
+            MoveKeys[0] = up;
+            MoveKeys[1] = down;
+            MoveKeys[2] = left;
+            MoveKeys[3] = right;
+            MoveKeys[4] = bomb;
+        }
 
         public Keys GetKey(int control) //0=Up, 1=Down, 2=Left, 3=Right
         {

@@ -101,13 +101,16 @@ namespace ProjektPK4.Content
             {
                 if (MaxTimeToEndFire-1 == TimeToEndFire && fireList[i].GetPosX() == GetPosX() && fireList[i].GetPosY() ==GetPosY() && !(fireList[i] is Fire))
                 { 
-                    if (fireList[i] is Box || fireList[i] is Bomb || fireList[i] is Character)
+                    if (fireList[i] is Box || fireList[i] is Bomb || fireList[i] is Character || fireList[i] is Powerups)
                     {
                         if(fireList[i] is Box)
                         {
                             Box box1 = (Box)fireList[i];
-                            fireList.Add(box1.TrySpawnPowerup());
-                            fireList.Remove(box1);
+                            if (box1.randomDrop() <= box1.GetChanceToDrop())
+                            {
+                                fireList.Add(box1.TrySpawnPowerup());
+                            }
+                                fireList.Remove(box1);
                             
                         }
                         else if (fireList[i] is Bomb)
@@ -120,6 +123,14 @@ namespace ProjektPK4.Content
                             fireList.Add(new Fire(fireList[i].GetPosX(), fireList[i].GetPosY(), fireList[i].GetRectangle().Width, fireList[i].GetRectangle().Height));
                             fireList.Remove(fireList[i]);
                         }
+                        else if( fireList[i] is Powerups)
+                        {
+                            Powerups powerups1 = (Powerups)fireList[i];
+                            if(powerups1.getIndestructible() <=0)
+                            {
+                                fireList.Remove(fireList[i]);
+                            }
+                        }
                         else
                         {
                             fireList.Remove(fireList[i]);
@@ -127,7 +138,7 @@ namespace ProjektPK4.Content
                     }
                  
                 }
-                else if (fireList[i] is Character && fireList[i].chceckColision(GetPosX(), GetRectangle().Width + GetPosX(), GetPosY(), GetRectangle().Height + GetPosY(), shade))
+                else if (fireList[i] is Character && fireList[i].chceckColision(GetPosX(), GetRectangle().Width + GetPosX(), GetPosY(), GetRectangle().Height + GetPosY()-shade, shade))
                 {
                     fireList.Add(new Fire(fireList[i].GetPosX(), fireList[i].GetPosY(), fireList[i].GetRectangle().Width, fireList[i].GetRectangle().Height));
                     fireList.Remove(fireList[i]);

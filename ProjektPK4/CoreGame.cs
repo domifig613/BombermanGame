@@ -93,18 +93,42 @@ namespace ProjektPK4
                 map.LoadTextureMap(Content.Load<Texture2D>(name), 6);
             }
 
+            for (int i = 1; i <= 16; i++)
+            {
+                name = "Sprites\\" + "PowerupsLighting" + i.ToString();
+                map.LoadTextureMap(Content.Load<Texture2D>(name), 7);
+            }
+
+            for (int i = 1; i <= 17; i++)
+            {
+                name = "Sprites\\" + "PowerupsPotion" + i.ToString();
+                map.LoadTextureMap(Content.Load<Texture2D>(name), 8);
+            }
+
+            for (int i = 1; i <= 15; i++)
+            {
+                name = "Sprites\\" + "PowerupsStar" + i.ToString();
+                map.LoadTextureMap(Content.Load<Texture2D>(name), 9);
+            }
+
+            
+
+
             LoadCharacterTexture();
         }
 
         private void LoadCharacterTexture()
         {
             string[] array = { "Up", "Down", "Left", "Right" };
-            for (int i = 0; i < 3; i++)
+            for (int k = 1; k <= 2; k++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int i = 0; i < 3; i++)
                 {
-                    string control = "Sprites\\Pirate1" + array[j] + (i + 1);
-                    map.LoadTexturePlayer(Content.Load<Texture2D>(control), i, j);
+                    for (int j = 0; j < 4; j++)
+                    {
+                        string control = "Sprites\\Pirate"+ k + array[j] + (i + 1);
+                        map.LoadTexturePlayer(Content.Load<Texture2D>(control), i, j, k-1);
+                    }
                 }
             }
         }

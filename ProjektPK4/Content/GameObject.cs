@@ -58,7 +58,7 @@ namespace ProjektPK4.Content
         }
         public bool CheckColisionHeight(int posY, int posYAndBody, int shade)
         {
-            if (posY > Body.Y && posY < Body.Y + Body.Height-shade || posYAndBody > Body.Y && posYAndBody < Body.Y + Body.Height-shade || posY==Body.Y && posYAndBody == Body.Y+Body.Height-shade)
+            if ((posY > Body.Y && posY < Body.Y + Body.Height-shade) || (posYAndBody > Body.Y && posYAndBody < Body.Y + Body.Height-shade) || (posY==Body.Y && posYAndBody == Body.Y+Body.Height-shade))
             {
                 return true;
             }

@@ -16,14 +16,17 @@ namespace ProjektPK4.Content
         protected int controlTextures = 3;
         protected int SpeedTexture=0;
         protected int MaxTextureSpeed;
-        protected int delayBettwenPutBomb = 100;//frame
+        protected int delayBettwenPutBomb;//frame
+        private int maxDelayBettwenPutBomb = 120;
         public int actuallDelayBomb { get; set; } = 0;//frame
-        public int Speed { get; } = 5;
+        public int Speed { get; set; } = 3;
         public int bombPower = 2;
+        
 
         public Character(int posX, int posY,int Width,int height ,int TexturSpeed) : base(posX, posY, Width,height) {
             CharacterTextures = new Texture2D[3, 4];
             MaxTextureSpeed = TexturSpeed;
+            delayBettwenPutBomb = maxDelayBettwenPutBomb;
         }
         //{ bomb
         public Bomb PutBomb(int Width, int height, int shade)
@@ -59,8 +62,6 @@ namespace ProjektPK4.Content
             }
         }
         //}
-
-
         public void SetTexture(Texture2D texture, int x, int y)
         {
             CharacterTextures[x, y] = texture;
@@ -70,7 +71,6 @@ namespace ProjektPK4.Content
         {
             return CharacterTextures[controlTextures%3,controlTextures/3];
         }
-
 
         public void SetControlTextures(int control)
         {
@@ -82,7 +82,6 @@ namespace ProjektPK4.Content
             MoveBody(wayX, wayY);
             ChangeControlTexture(number);
         }
-
 
         private void ChangeControlTexture(int number)
         {
@@ -119,5 +118,24 @@ namespace ProjektPK4.Content
                 controlTextures = number;
             }
         }
+
+        public void AddBombPower()
+        {
+            bombPower++;
+        }
+        public void AddSpeed()
+        {
+            if (Speed <= 8)
+            {
+                Speed++;
+            }
+        }
+        public void ShortenMaxDelayBettwenPutBomb()
+        {
+            int count = maxDelayBettwenPutBomb / delayBettwenPutBomb;
+            count++;
+            delayBettwenPutBomb = maxDelayBettwenPutBomb / count;
+        }
+
     }
 }
