@@ -251,16 +251,28 @@ namespace ProjektPK4.Content
             AddToTemporaryList(ref TemporaryListFire, ref TemporaryListPowerups);//take powerups and fire from objectToDraw
             CheckBurnObject(ref TemporaryListFire, ref TemporaryListPowerups);//fire objectToDraw or powerups if colision
 
+            shortDelayBomb();
+            PutBomb();//if player press key to put bomb
+            move();
+
+            TryPickPowerUp(ref TemporaryListPowerups);//check player position and powerups and try pick powerups
+            RemoveFromTemporaryList(ref TemporaryListFire, ref TemporaryListPowerups); // put back powerups and fire to objectToDraw
+        }
+
+        private void move()
+        {
+            foreach (Player player1 in Player)
+            {
+                CheckMovePlayer(0, player1);// move (cant see powerups and fire)
+            }
+        }
+
+        private void shortDelayBomb()
+        {
             foreach (Player Player1 in Player)
             {
                 Player1.shortenTheDelay();//Player shorten time to put bomb
             }
-            PutBomb();//if player press key to put bomb
-            CheckMovePlayer(0);// move (cant see powerups and fire)
-
-
-            TryPickPowerUp(ref TemporaryListPowerups);//check player position and powerups and try pick powerups
-            RemoveFromTemporaryList(ref TemporaryListFire, ref TemporaryListPowerups); // put back powerups and fire to objectToDraw
         }
 
         private void TryPickPowerUp(ref List<GameObject> powerups)
@@ -398,10 +410,8 @@ namespace ProjektPK4.Content
         }
 
         //{     //try move for every object
-        private void CheckMovePlayer(int control)
+        private void CheckMovePlayer(int control, Player player1)
         {
-            foreach (Player player1 in Player)
-            {
                 if (Keyboard.GetState().IsKeyDown(player1.GetKey(0)) && control == 0 || control == 1)//up
                 {
                     CheckMoveUp(control, player1);
@@ -417,8 +427,7 @@ namespace ProjektPK4.Content
                 else if (Keyboard.GetState().IsKeyDown(player1.GetKey(3)) && control == 0 || control == 4)//right
                 {
                     CheckMoveRight(control, player1);
-                }
-            }
+                }  
         } //1
 
         private void CheckMoveUp(int control, Player Player)
@@ -567,18 +576,18 @@ namespace ProjektPK4.Content
             return objectReturn;
         }
 
-        private void MoveInAnotherDirection(GameObject Player, GameObject closerObject, bool UpOrDownTrue)
+        private void MoveInAnotherDirection(Player Player, GameObject closerObject, bool UpOrDownTrue)
         {
             if (UpOrDownTrue)
             {
                 int position = Player.GetPosX() - closerObject.GetPosX();
                 if (position < 0 && FindObjectWithLowerX(closerObject.GetPosX(), closerObject.GetPosY()).GetPosX() + GameParam.OneAreaWidth < closerObject.GetPosX())
                 {
-                    CheckMovePlayer(3);
+                    CheckMovePlayer(3, Player);
                 }
                 else if (position > 0 && FindObjectWithHigherX(closerObject.GetPosX(), closerObject.GetPosY()).GetPosX() - GameParam.OneAreaWidth > closerObject.GetPosX())
                 {
-                    CheckMovePlayer(4);
+                    CheckMovePlayer(4, Player);
                 }
             }
             else
@@ -586,11 +595,11 @@ namespace ProjektPK4.Content
                 int position = Player.GetPosY() - closerObject.GetPosY();
                 if (position < 0 && FindObjectWithLowerY(closerObject.GetPosX(), closerObject.GetPosY()).GetPosY() + GameParam.OneAreaHeight < closerObject.GetPosY())
                 {
-                    CheckMovePlayer(1);
+                    CheckMovePlayer(1, Player);
                 }
                 else if (position > 0 && FindObjectWithHigherY(closerObject.GetPosX(), closerObject.GetPosY()).GetPosY() - GameParam.OneAreaHeight > closerObject.GetPosY())
                 {
-                    CheckMovePlayer(2);
+                    CheckMovePlayer(2, Player);
                 }
             }
         } //4
