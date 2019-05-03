@@ -55,10 +55,15 @@ namespace ProjektPK4.Content
             AddPremiumBoxes();
 
             Player.Add(new Player(GameParam.OneAreaWidth, GameParam.OneAreaHeight, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, GameParam.CharacterSlowerAnimation, Keys.Up, Keys.Down, Keys.Left, Keys.Right, Keys.P));
-            Player.Add(new Player(GameParam.WindowWidth - 2*GameParam.OneAreaWidth, GameParam.WindowHeight - 2 * GameParam.OneAreaHeight, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, GameParam.CharacterSlowerAnimation, Keys.W, Keys.S, Keys.A, Keys.D, Keys.V));
+            Player.Add(new Player(GameParam.WindowWidth - 2*GameParam.OneAreaWidth, GameParam.WindowHeight - (2 * GameParam.OneAreaHeight+GameParam.AreaYShade), GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, GameParam.CharacterSlowerAnimation, Keys.W, Keys.S, Keys.A, Keys.D, Keys.V));
+            Player.Add(new Player(GameParam.OneAreaWidth, GameParam.WindowHeight - (2 * GameParam.OneAreaHeight + GameParam.AreaYShade), GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, GameParam.CharacterSlowerAnimation, Keys.W, Keys.S, Keys.A, Keys.D, Keys.V));
+            Player.Add(new Player(GameParam.WindowWidth - 2 * GameParam.OneAreaWidth, GameParam.OneAreaWidth, GameParam.OneAreaWidth, GameParam.OneAreaHeight + GameParam.AreaYShade, GameParam.CharacterSlowerAnimation, Keys.W, Keys.S, Keys.A, Keys.D, Keys.V));
 
-            ObjectToDraw.Add(Player[0]);
-            ObjectToDraw.Add(Player[1]);
+
+            for(int i=0; i<4; i++)
+            {
+                ObjectToDraw.Add(Player[i]);
+            }
             SortObjectToDraw();
         }
 

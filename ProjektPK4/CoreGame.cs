@@ -120,7 +120,7 @@ namespace ProjektPK4
         private void LoadCharacterTexture()
         {
             string[] array = { "Up", "Down", "Left", "Right" };
-            for (int k = 1; k <= 2; k++)
+            for (int k = 1; k <= 4; k++)
             {
                 for (int i = 0; i < 3; i++)
                 {
