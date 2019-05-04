@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 
-namespace ProjektPK4.game
+namespace ProjektPK4.Content
 {
     public static class Map
     {

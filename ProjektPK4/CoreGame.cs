@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using ProjektPK4.game;
 using System;
 
 namespace ProjektPK4
@@ -10,9 +11,7 @@ namespace ProjektPK4
     /// </summary>
     public class CoreGame : Game
     {
-        ProgramParameters GameParameters = new ProgramParameters(); 
 
-        Content.Map map;
         GraphicsDeviceManager graphics;
   
         SpriteBatch spriteBatch;//help draw textures
@@ -25,10 +24,8 @@ namespace ProjektPK4
             graphics = new GraphicsDeviceManager(this); //tworzymy nowa aplikacje graphicDeviceManager
             Content.RootDirectory = "Content"; //folder gdzie szukamy tresci gry
 
-            graphics.PreferredBackBufferHeight = GameParameters.WindowHeight;
-            graphics.PreferredBackBufferWidth =  GameParameters.WindowWidth;
-
-            map = new Content.Map();
+            graphics.PreferredBackBufferHeight = ProgramParameters.WindowHeight;
+            graphics.PreferredBackBufferWidth =  ProgramParameters.WindowWidth;
         }
 
    
@@ -67,48 +64,48 @@ namespace ProjektPK4
                 "fireStartDownRight2","fireStartUpLeft2","fireStartUpRight2", "DeadFire"};
 
             string name = "Sprites\\" + textureNameArray[0];
-            map.LoadTextureMap(Content.Load<Texture2D>(name), 0);
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 0);
             name = "Sprites\\" + textureNameArray[1];
-            map.LoadTextureMap(Content.Load<Texture2D>(name), 1);
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 1);
             name = "Sprites\\" + textureNameArray[2];
-            map.LoadTextureMap(Content.Load<Texture2D>(name), 2);
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 2);
             name = "Sprites\\" + textureNameArray[3];
-            map.LoadTextureMap(Content.Load<Texture2D>(name), 3);
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 3);
             
             for(int i=0; i<13; i++)
             {
                 name = "Sprites\\" + textureNameArray[i+4];
-                map.LoadTextureMap(Content.Load<Texture2D>(name), 4);
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 4);
             }
 
             for(int i=0; i<16; i++)
             {
                 name = "Sprites\\" + textureNameArray[i + 17];
-                map.LoadTextureMap(Content.Load<Texture2D>(name), 5);
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 5);
             }
 
             for (int i = 1; i <= 18; i++)
             {
                 name = "Sprites\\" + "PowerupsBomb" + i.ToString();
-                map.LoadTextureMap(Content.Load<Texture2D>(name), 6);
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 6);
             }
 
             for (int i = 1; i <= 16; i++)
             {
                 name = "Sprites\\" + "PowerupsLighting" + i.ToString();
-                map.LoadTextureMap(Content.Load<Texture2D>(name), 7);
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 7);
             }
 
             for (int i = 1; i <= 17; i++)
             {
                 name = "Sprites\\" + "PowerupsPotion" + i.ToString();
-                map.LoadTextureMap(Content.Load<Texture2D>(name), 8);
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 8);
             }
 
             for (int i = 1; i <= 15; i++)
             {
                 name = "Sprites\\" + "PowerupsStar" + i.ToString();
-                map.LoadTextureMap(Content.Load<Texture2D>(name), 9);
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 9);
             }
 
             
@@ -127,7 +124,7 @@ namespace ProjektPK4
                     for (int j = 0; j < 4; j++)
                     {
                         string control = "Sprites\\Pirate"+ k + array[j] + (i + 1);
-                        map.LoadTexturePlayer(Content.Load<Texture2D>(control), i, j, k-1);
+                        Map.LoadTexturePlayer(Content.Load<Texture2D>(control), i, j, k-1);
                     }
                 }
             }
@@ -164,15 +161,15 @@ namespace ProjektPK4
         protected override void Draw(GameTime gameTime) //rysowanie, wiele razy na sekunde
         {
 
-            map.MapChanges();
-            map.SortObjectToDraw();
+            Map.MapChanges();
+            Map.SortObjectToDraw();
 
             GraphicsDevice.Clear(Color.BurlyWood); //kolor tla
 
             spriteBatch.Begin();
 
             // TODO: Add your drawing code here
-            map.DrawMap(spriteBatch);
+            Map.DrawMap(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);

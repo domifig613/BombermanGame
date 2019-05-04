@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace ProjektPK4.game
+namespace ProjektPK4.Content
 {
     class Character:GameObject
     {

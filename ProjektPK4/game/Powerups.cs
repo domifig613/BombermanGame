@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjektPK4.game
+namespace ProjektPK4.Content
 {
     class Powerups: GameObject
     {
