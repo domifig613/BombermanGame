@@ -19,6 +19,8 @@
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Bomb9.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/box1.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Box2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/chest.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/chestBack.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/DeadFire.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/End1.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireEndDown.png</File>
@@ -36,6 +38,10 @@
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartUp1.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartUpLeft2.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireStartUpRight2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/headScore1.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/headScore2.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/headScore3.png</File>
+    <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/headScore4.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Down1.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Down2.png</File>
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Pirate1Down3.png</File>
@@ -153,6 +159,12 @@
     <File>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/Rock1.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

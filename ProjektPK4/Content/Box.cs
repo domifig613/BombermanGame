@@ -12,8 +12,8 @@ namespace ProjektPK4.game
     class Box : GameObject
     {
         static Random rand = new Random();
-        int chanceDropPowerups;//percent 
-        public Box(int positionX, int positionY, int widht, int height, int chanceDrop) : base(positionX, positionY, widht, height) {
+        readonly int chanceDropPowerups;//percent 
+        public Box(int positionX, int positionY,int chanceDrop) : base(positionX, positionY) {
             chanceDropPowerups = chanceDrop;
         }
 
@@ -42,11 +42,11 @@ namespace ProjektPK4.game
             {
                 speedTexture = 5;
             }
-            return new Powerups(20, type,speedTexture, GetPosX(), GetPosY(), GetRectangle().Width, GetRectangle().Height);
+            return new Powerups(20, type,speedTexture, GetPosX(), GetPosY());
 
         }
 
-        public int randomDrop()
+        public int RandomDrop()
         {
             return rand.Next(100);
         }

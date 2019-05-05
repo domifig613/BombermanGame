@@ -365,3 +365,9 @@ C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Win
 C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate4Up1.xnb
 C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate4Up2.xnb
 C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\Pirate4Up3.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\chest.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\chestBack.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\headScore1.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\headScore2.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\headScore3.xnb
+C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Debug\Content\Sprites\headScore4.xnb

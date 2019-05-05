@@ -13,45 +13,45 @@ namespace ProjektPK4
     {
 
         GraphicsDeviceManager graphics;
-  
         SpriteBatch spriteBatch;//help draw textures
 
 
-        public CoreGame() //konstrukotr
+        public CoreGame()
         {
            TargetElapsedTime = TimeSpan.FromSeconds(1d / 60d); //frame rate 60
 
-            graphics = new GraphicsDeviceManager(this); //tworzymy nowa aplikacje graphicDeviceManager
-            Content.RootDirectory = "Content"; //folder gdzie szukamy tresci gry
+            graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content"; //where we find content
 
             graphics.PreferredBackBufferHeight = ProgramParameters.WindowHeight;
-            graphics.PreferredBackBufferWidth =  ProgramParameters.WindowWidth;
+            graphics.PreferredBackBufferWidth =  ProgramParameters.WindowWidth + ProgramParameters.ScoreBarWidth;
         }
 
-   
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
-        protected override void Initialize() //po konstruktorze ale przed glowna petla gry, ladowanie tresci niezwiazane z grafika
+        protected override void Initialize()
         {
             // TODO: Add your initialization logic here
 
             base.Initialize();
         }
 
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
-        protected override void LoadContent() //ladowanie tresci gry TYLKO RAZ NA POCZATKU
+        protected override void LoadContent() //load texture, before start game
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
             LoadTexturesToMap();
+            LoadTexturesToScoreBar();
+        }
+
+        private void LoadTexturesToScoreBar()
+        {
+            Texture2D[] characterHead = new Texture2D[4];
+            for(int i=1; i<=4; i++)
+            {
+                string name = "Sprites\\headScore" + i;
+                characterHead[i-1] = Content.Load<Texture2D>(name);
+            }
+
+            Scorebar.LoadScoreboardTextures(characterHead,Content.Load<Texture2D>("Sprites\\chest"), Content.Load<Texture2D>("Sprites\\chestBack"), new Texture2D(GraphicsDevice, 1, 1));
         }
 
         private void LoadTexturesToMap()
@@ -108,8 +108,6 @@ namespace ProjektPK4
                 Map.LoadTextureMap(Content.Load<Texture2D>(name), 9);
             }
 
-            
-
 
             LoadCharacterTexture();
         }
@@ -130,45 +128,28 @@ namespace ProjektPK4
             }
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// game-specific content.
-        /// </summary>
-        protected override void UnloadContent()
+        protected override void Update(GameTime gameTime) 
         {
-            // TODO: Unload any non ContentManager content here
-        }
+            Map.MapChanges();
+            Map.SortObjectToDraw();
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime) //kolizja gromadzenie danych wejsciowych dzwiek, wiecej niz rysowanie
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))//close game
+            {
                 Exit();
+            }
 
             // TODO: Add your update logic here
 
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime) //rysowanie, wiele razy na sekunde
+        protected override void Draw(GameTime gameTime) //draw
         {
-
-            Map.MapChanges();
-            Map.SortObjectToDraw();
-
-            GraphicsDevice.Clear(Color.BurlyWood); //kolor tla
+            GraphicsDevice.Clear(Color.BurlyWood);
 
             spriteBatch.Begin();
-
-            // TODO: Add your drawing code here
+            // draw here
+            Scorebar.DrawScorebar(spriteBatch);
             Map.DrawMap(spriteBatch);
             spriteBatch.End();
 

@@ -9,29 +9,29 @@ using Microsoft.Xna.Framework.Input;
 
 namespace ProjektPK4.game
 {
-    class Character:GameObject
+    abstract class Character:GameObject
     {
         protected bool MoveControl = false;//for loading good texture
-        private Texture2D[,] CharacterTextures;// [3,4]   x:0 Up x:1 Down x:2 Left x: 3 Right
-        protected int controlTextures = 3;
+        readonly private Texture2D[,] CharacterTextures;// [3,4]   x:0 Up x:1 Down x:2 Left x: 3 Right
+        protected int ControlTextures = 3;
         protected int SpeedTexture=0;
         protected int MaxTextureSpeed;
-        protected int delayBettwenPutBomb;//frame
-        private int maxDelayBettwenPutBomb = 120;
-        public int actuallDelayBomb { get; set; } = 0;//frame
+        protected int DelayBettwenPutBomb;//frame
+        readonly private int MaxDelayBettwenPutBomb = 120;
+        public int ActuallDelayBomb { get; set; } = 0;//frame
         public int Speed { get; set; } = 3;
-        public int bombPower = 2;
+        public int BombPower = 2;
         
 
-        public Character(int posX, int posY,int Width,int height ,int TexturSpeed) : base(posX, posY, Width,height) {
+        public Character(int posX, int posY) : base(posX, posY) {
             CharacterTextures = new Texture2D[3, 4];
-            MaxTextureSpeed = TexturSpeed;
-            delayBettwenPutBomb = maxDelayBettwenPutBomb;
+            MaxTextureSpeed = ProgramParameters.CharacterSlowerAnimation;
+            DelayBettwenPutBomb = MaxDelayBettwenPutBomb;
         }
         //{ bomb
         public Bomb PutBomb(int Width, int height, int shade)
         { 
-            actuallDelayBomb = delayBettwenPutBomb;
+            ActuallDelayBomb = DelayBettwenPutBomb;
             
             int BombPosX;
             int BombPosY;
@@ -52,13 +52,13 @@ namespace ProjektPK4.game
                 BombPosY = GetPosY() - GetPosY() % height;
             }
 
-            return new Bomb(BombPosX, BombPosY, Width, height+shade, bombPower);
+            return new Bomb(BombPosX, BombPosY, BombPower);
         }
-        public void shortenTheDelay()
+        public void ShortenTheDelay()
         {
-            if (actuallDelayBomb > 0)
+            if (ActuallDelayBomb > 0)
             {
-                actuallDelayBomb--;
+                ActuallDelayBomb--;
             }
         }
         //}
@@ -69,12 +69,12 @@ namespace ProjektPK4.game
 
         public Texture2D GetTexture()
         {
-            return CharacterTextures[controlTextures%3,controlTextures/3];
+            return CharacterTextures[ControlTextures%3,ControlTextures/3];
         }
 
         public void SetControlTextures(int control)
         {
-            controlTextures = control;
+            ControlTextures = control;
         }
 
         public void MoveCharacter(int wayX, int wayY, int number)//way: 0 up, 1 down, 2 left, 3 right
@@ -85,28 +85,28 @@ namespace ProjektPK4.game
 
         private void ChangeControlTexture(int number)
         {
-            if (controlTextures >= number && controlTextures <= number + 2)
+            if (ControlTextures >= number && ControlTextures <= number + 2)
             {
                 if (SpeedTexture == MaxTextureSpeed)
                 {
                     SpeedTexture = 0;
-                    if (controlTextures == number)
+                    if (ControlTextures == number)
                     {
                         if (MoveControl)
                         {
-                            controlTextures = number + 1;
+                            ControlTextures = number + 1;
                         }
                         else
                         {
-                            controlTextures = number + 2;
+                            ControlTextures = number + 2;
                         }
                         return;
                     }
-                    else if (controlTextures == number + 1 || controlTextures == number + 2)
+                    else if (ControlTextures == number + 1 || ControlTextures == number + 2)
                     {
                         MoveControl = !MoveControl;
                     }
-                    controlTextures = number;
+                    ControlTextures = number;
                 }
                 else
                 {
@@ -115,13 +115,13 @@ namespace ProjektPK4.game
             }
             else
             {
-                controlTextures = number;
+                ControlTextures = number;
             }
         }
 
         public void AddBombPower()
         {
-            bombPower++;
+            BombPower++;
         }
         public void AddSpeed()
         {
@@ -132,9 +132,9 @@ namespace ProjektPK4.game
         }
         public void ShortenMaxDelayBettwenPutBomb()
         {
-            int count = maxDelayBettwenPutBomb / delayBettwenPutBomb;
+            int count = MaxDelayBettwenPutBomb / DelayBettwenPutBomb;
             count++;
-            delayBettwenPutBomb = maxDelayBettwenPutBomb / count;
+            DelayBettwenPutBomb = MaxDelayBettwenPutBomb / count;
         }
 
     }
