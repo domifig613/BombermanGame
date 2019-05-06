@@ -23,14 +23,23 @@ namespace ProjektPK4.game
         {
             Background = new Rectangle(ProgramParameters.WindowWidth, 0, ProgramParameters.ScoreBarWidth, ProgramParameters.WindowHeight);
             CharacterRectangles = new Rectangle[4];
+            ChestRectangles = new Rectangle[4, 3];
 
             for (int i = 0; i < 4; i++)
             {
-                Rectangle rectangle = new Rectangle(ProgramParameters.WindowWidth, ProgramParameters.WindowHeight / (i + 1), 20 , 20);
+                Rectangle rectangle = new Rectangle(ProgramParameters.WindowWidth+(ProgramParameters.ScoreBarWidth/2)-(ProgramParameters.OneAreaWidth/2), 
+                 ProgramParameters.WindowHeight /5+ (i*ProgramParameters.WindowHeight/5) - ProgramParameters.OneAreaHeight, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight);
+
                 CharacterRectangles[i] = rectangle;
+                for (int j = 0; j < 3; j++)
+                {
+                    rectangle = new Rectangle(ProgramParameters.WindowWidth + (ProgramParameters.ScoreBarWidth / 2) - (ProgramParameters.OneAreaWidth*2) + (j*ProgramParameters.OneAreaWidth*3/2),
+                        ProgramParameters.WindowHeight / 5 + (i * ProgramParameters.WindowHeight / 5) + ProgramParameters.OneAreaHeight/2,
+                        ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight);
+                    ChestRectangles[i, j] = rectangle;
+                }
             }
 
-            ChestRectangles = new Rectangle[4, 3];
             CharacterPlay = new bool[4];
             CheadTextures = new Texture2D[4];
             Chest = new Texture2D[2];
@@ -74,6 +83,10 @@ namespace ProjektPK4.game
                 //if(CharacterPlay[i]==true)
                 //{
                     Batch.Draw(CheadTextures[i], CharacterRectangles[i], Color.White);
+                for(int j=0; j<3; j++)
+                {
+                    Batch.Draw(Chest[0], ChestRectangles[i,j], Color.White);
+                }
                // }
             }
         }
