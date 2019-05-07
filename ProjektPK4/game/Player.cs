@@ -7,13 +7,13 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace ProjektPK4.Content
+namespace ProjektPK4.game
 {
     class Player : Character
     {
-        Keys[] MoveKeys= new Keys[5];
+        readonly Keys[] MoveKeys = new Keys[5];
         
-        public Player(int posX, int posY,int Width,int height ,int speedTexture, Keys up, Keys down, Keys left, Keys right, Keys bomb) : base(posX, posY,Width,height ,speedTexture)
+        public Player(int posX, int posY, Keys up, Keys down, Keys left, Keys right, Keys bomb, int playerNumber) : base(posX, posY, playerNumber)
         {
             MoveKeys[0] = up;
             MoveKeys[1] = down;
@@ -26,7 +26,5 @@ namespace ProjektPK4.Content
         {
             return MoveKeys[control];
         }
-
-
     }
 }

@@ -56,6 +56,8 @@ namespace ProjektPK4
 
         private void LoadTexturesToMap()
         {
+            
+
             string[] textureNameArray = { "End1", "Rock1", "Box1", "Box2", "Bomb1", "Bomb2",
                 "Bomb3", "Bomb4" ,"Bomb5","Bomb6","Bomb7","Bomb8","Bomb9","Bomb10","Bomb11",
                 "Bomb12","Bomb13","fireNormalStart","fireMiddleLeftRight","fireMiddleUpDown",
@@ -108,8 +110,8 @@ namespace ProjektPK4
                 Map.LoadTextureMap(Content.Load<Texture2D>(name), 9);
             }
 
-
             LoadCharacterTexture();
+            Map.AddTextureToPlayer();
         }
 
         private void LoadCharacterTexture()

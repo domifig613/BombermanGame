@@ -7,15 +7,19 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace ProjektPK4.Game
+namespace ProjektPK4.game
 {
     class GameObject
     {
         private Rectangle Body;
 
-        public GameObject(int positionX, int positionY, int Width, int height)
+        public GameObject(int positionX, int positionY)
         {
-            Body = new Rectangle(positionX, positionY, Width, height);
+            Body = new Rectangle(positionX, positionY, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight+ProgramParameters.AreaYShade);
+        }
+        public GameObject(int positionX, int positionY, int shade)
+        {
+            Body = new Rectangle(positionX, positionY, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + shade);
         }
 
         public Rectangle GetRectangle()
@@ -39,26 +43,29 @@ namespace ProjektPK4.Game
             Body.Y = Body.Y+posY;
         }
 
-        public bool chceckColision(int posX,int posXandBody,int posY, int posYandBody, int shade)
+        public bool ChceckColision(int posX, int posY)
         {
-            if(CheckColisionWidth(posX, posXandBody) && CheckColisionHeight(posY, posYandBody, shade))
+            if(CheckColisionWidth(posX) && CheckColisionHeight(posY))
             {
                 return true;
             }
             return false;
         }
 
-        public bool CheckColisionWidth(int posX, int posXAndBody)
+        public bool CheckColisionWidth(int posX)
         {
-            if (posX > Body.X && posX < Body.X + Body.Width || posXAndBody > Body.X && posXAndBody < Body.X + Body.Width || posX == Body.X && posXAndBody == Body.X + Body.Width)
+            if (posX > Body.X && posX < Body.X + Body.Width || posX + ProgramParameters.OneAreaWidth > Body.X && posX + ProgramParameters.OneAreaWidth < Body.X + Body.Width ||
+                posX == Body.X && posX + ProgramParameters.OneAreaWidth == Body.X + Body.Width)
             {
                 return true;
             }
             return false;
         }
-        public bool CheckColisionHeight(int posY, int posYAndBody, int shade)
+        public bool CheckColisionHeight(int posY)
         {
-            if ((posY > Body.Y && posY < Body.Y + Body.Height-shade) || (posYAndBody > Body.Y && posYAndBody < Body.Y + Body.Height-shade) || (posY==Body.Y && posYAndBody == Body.Y+Body.Height-shade))
+            if ((posY > Body.Y && posY < Body.Y + Body.Height- ProgramParameters.AreaYShade) ||
+                (posY + ProgramParameters.OneAreaHeight > Body.Y && posY + ProgramParameters.OneAreaHeight < Body.Y + Body.Height- ProgramParameters.AreaYShade) ||
+                (posY==Body.Y && posY + ProgramParameters.OneAreaHeight == Body.Y+Body.Height- ProgramParameters.AreaYShade))
             {
                 return true;
             }

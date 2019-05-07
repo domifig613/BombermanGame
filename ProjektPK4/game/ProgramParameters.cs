@@ -8,16 +8,17 @@ namespace ProjektPK4
 {
    static class ProgramParameters
     {
-        static public int WindowWidth { get; } = 760;
-        static public int WindowHeight { get; } = 620;
+        readonly static public int WindowWidth  = 760;
+        readonly static public int WindowHeight  = 620;
+        readonly static public int ScoreBarWidth = 200;
 
-        static public int OneAreaWidth { get; } = 40;
-        static public int OneAreaHeight { get; } = 40;
-        static public int AreaYShade { get; } = 20;
-        static public int StartPositionSize { get; } = 3; //how much space free from box example 3 = 3x3 free space
-        static public int CharacterSlowerAnimation { get; } = 12; //higer = slower animation
-        static public int CountOfNormalBox { get; } = 90;
-        static public int CountOfPremiumBox { get; } = 10;
+        readonly static public int OneAreaWidth  = 40;
+        readonly static public int OneAreaHeight  = 40;
+        readonly static public int AreaYShade  = 20;
+        readonly static public int StartPositionSize  = 3; //how much space free from box example 3 = 3x3 free space
+        readonly static public int CharacterSlowerAnimation  = 6; //higer = slower animation
+        readonly static public int CountOfNormalBox = 90;
+        readonly static public int CountOfPremiumBox  = 10;
 
     }
 }

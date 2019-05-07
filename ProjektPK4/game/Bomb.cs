@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace ProjektPK4.Content
+namespace ProjektPK4.game
 {
     class Bomb : GameObject
     {
@@ -17,7 +17,7 @@ namespace ProjektPK4.Content
         readonly private int maxTimeToDestroy = 120;
         private int timerToDestroy;//frame
         int textureNumber = 0;
-        public Bomb(int posX, int posY, int Width, int height, int _range) : base(posX, posY, Width, height)
+        public Bomb(int posX, int posY,int _range) : base(posX, posY)
         {
             timerToDestroy = maxTimeToDestroy;
             range = _range;
@@ -52,7 +52,7 @@ namespace ProjektPK4.Content
 
         public void DestroyBombCreateFire(ref List<GameObject> fireList, int Width, int height, int[] distance, bool[] destroyable)
         {
-            fireList.Add(new Fire(range, GetPosX(), GetPosY(), Width, height, ref fireList, distance, destroyable));
+            fireList.Add(new Fire(range, GetPosX(), GetPosY(), ref fireList, distance, destroyable));
         }
 
         public int GetTextureNumber()

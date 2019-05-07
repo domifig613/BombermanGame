@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjektPK4.Content
+namespace ProjektPK4.game
 {
     class Fire : GameObject
     {
@@ -12,35 +12,35 @@ namespace ProjektPK4.Content
         readonly int MaxTimeToEndFire = 20;//frame
         int TextureNumber;
 
-        public Fire(int power, int positionX, int positionY, int Width, int height, ref List<GameObject> fireList,
-            int[] Distance, bool[] Destroyable) : base(positionX, positionY, Width, height)//use in bomb, middle fire
+        public Fire(int power, int positionX, int positionY, ref List<GameObject> fireList,
+            int[] Distance, bool[] Destroyable) : base(positionX, positionY, 0)//use in bomb, middle fire
         {
             TimeToEndFire = MaxTimeToEndFire;
-            FindGoodTextureNumberForStart(Distance, Destroyable, Width,height);
+            FindGoodTextureNumberForStart(Distance, Destroyable, ProgramParameters.OneAreaWidth,ProgramParameters.OneAreaHeight);
 
-            if (Distance[0] > height || Destroyable[0] == true)
+            if (Distance[0] > ProgramParameters.OneAreaHeight || Destroyable[0] == true)
             {
-                fireList.Add(new Fire(power - 1, 1, positionX, positionY - height, Width, height, Distance[0]-height, Destroyable[0], ref fireList));
+                fireList.Add(new Fire(power - 1, 1, positionX, positionY - ProgramParameters.OneAreaHeight, Distance[0]-ProgramParameters.OneAreaHeight, Destroyable[0], ref fireList));
             }
-            if (Distance[1] > height || Destroyable[1] == true)
+            if (Distance[1] > ProgramParameters.OneAreaHeight || Destroyable[1] == true)
             {
-                fireList.Add(new Fire(power - 1, 2, positionX, positionY + height, Width, height, Distance[1] - height, Destroyable[1], ref fireList));
+                fireList.Add(new Fire(power - 1, 2, positionX, positionY + ProgramParameters.OneAreaHeight,  Distance[1] - ProgramParameters.OneAreaHeight, Destroyable[1], ref fireList));
             }
-            if (Distance[2] > Width || Destroyable[2] == true)
+            if (Distance[2] > ProgramParameters.OneAreaWidth || Destroyable[2] == true)
             {
-                fireList.Add(new Fire(power - 1, 3, positionX - Width, positionY, Width, height, Distance[2] - Width, Destroyable[2], ref fireList));
+                fireList.Add(new Fire(power - 1, 3, positionX - ProgramParameters.OneAreaWidth, positionY, Distance[2] - ProgramParameters.OneAreaWidth, Destroyable[2], ref fireList));
             }
-            if (Distance[3] > Width || Destroyable[3] == true)
+            if (Distance[3] > ProgramParameters.OneAreaWidth || Destroyable[3] == true)
             {
-                fireList.Add(new Fire(power - 1, 4, positionX + Width, positionY , Width, height, Distance[3] - Width, Destroyable[3], ref fireList));
+                fireList.Add(new Fire(power - 1, 4, positionX + ProgramParameters.OneAreaWidth, positionY ,  Distance[3] - ProgramParameters.OneAreaWidth, Destroyable[3], ref fireList));
             }
         }
 
-        public Fire(int power, int FireDirection, int positionX, int positionY, int Width, int height, int distance, bool destroyable,
-           ref List<GameObject> fireList) : base(positionX, positionY, Width, height)//use in first fire constructor or recursion
+        public Fire(int power, int FireDirection, int positionX, int positionY, int distance, bool destroyable,
+           ref List<GameObject> fireList) : base(positionX, positionY, 0)//use in first fire constructor or recursion
         {
             TimeToEndFire = MaxTimeToEndFire;
-            if (power == 0 || distance <= 0 || distance == Width && destroyable == false)
+            if (power == 0 || distance <= 0 || distance == ProgramParameters.OneAreaWidth && destroyable == false)
             {
                 switch (FireDirection)
                 {
@@ -63,32 +63,32 @@ namespace ProjektPK4.Content
                 switch (FireDirection)
                 {
                     case 1:
-                        positionY -= height;
-                        distance -= height;
+                        positionY -= ProgramParameters.OneAreaHeight;
+                        distance -= ProgramParameters.OneAreaHeight;
                         TextureNumber = 2;
                         break;
                     case 2:
-                        positionY += height;
-                        distance -= height;
+                        positionY += ProgramParameters.OneAreaHeight;
+                        distance -= ProgramParameters.OneAreaHeight;
                         TextureNumber = 2;
                         break;
                     case 3:
-                        positionX -= Width;
-                        distance -= Width;
+                        positionX -= ProgramParameters.OneAreaWidth;
+                        distance -= ProgramParameters.OneAreaWidth;
                         TextureNumber = 1;
                         break;
                     case 4:
-                        positionX += Width;
-                        distance -= Width;
+                        positionX += ProgramParameters.OneAreaWidth;
+                        distance -= ProgramParameters.OneAreaWidth;
                         TextureNumber = 1;
                         break;
                 }
 
-                fireList.Add(new Fire(power - 1, FireDirection, positionX, positionY, Width, height, distance, destroyable, ref fireList));
+                fireList.Add(new Fire(power - 1, FireDirection, positionX, positionY, distance, destroyable, ref fireList));
             }
         }//fire direction 1 up, 2 down, 3 left, 4 right
 
-        public Fire(int positionX, int positionY, int Width, int height) :base(positionX, positionY, Width, height)
+        public Fire(int positionX, int positionY) :base(positionX, positionY, 0)
         {
             TextureNumber = 15;
             TimeToEndFire = MaxTimeToEndFire;
@@ -100,44 +100,48 @@ namespace ProjektPK4.Content
             for (int i = fireList.Count - 1; i >= 0; i--)
             {
                 if (MaxTimeToEndFire-1 == TimeToEndFire && fireList[i].GetPosX() == GetPosX() && fireList[i].GetPosY() ==GetPosY() && !(fireList[i] is Fire))
-                { 
-                    if (fireList[i] is Box || fireList[i] is Bomb || fireList[i] is Character || fireList[i] is Powerups)
-                    {
-                        if (fireList[i] is Box box1)
-                        {
-                            if (box1.randomDrop() <= box1.GetChanceToDrop())
-                            {
-                                fireList.Add(box1.TrySpawnPowerup());
-                            }
-                            fireList.Remove(box1);
-
-                        }
-                        else if (fireList[i] is Bomb bomb1)
-                        {
-                            bomb1.SetTimeToZero();
-                        }
-                        else if (fireList[i] is Character)
-                        {
-                            fireList.Add(new Fire(fireList[i].GetPosX(), fireList[i].GetPosY(), fireList[i].GetRectangle().Width, fireList[i].GetRectangle().Height));
-                            fireList.Remove(fireList[i]);
-                        }
-                        else if (fireList[i] is Powerups powerups1)
-                        {
-                            if (powerups1.getIndestructible() <= 0)
-                            {
-                                fireList.Remove(fireList[i]);
-                            }
-                        }
-                        else
-                        {
-                            fireList.Remove(fireList[i]);
-                        }
-                    }
-                 
-                }
-                else if (fireList[i] is Character && fireList[i].chceckColision(GetPosX(), GetRectangle().Width + GetPosX(), GetPosY(), GetRectangle().Height + GetPosY()-shade, shade))
                 {
-                    fireList.Add(new Fire(fireList[i].GetPosX(), fireList[i].GetPosY(), fireList[i].GetRectangle().Width, fireList[i].GetRectangle().Height));
+                    BurnWithTheSamePosition(fireList, i);
+                }
+                else if (fireList[i] is Character && fireList[i].ChceckColision(GetPosX(), GetPosY()))
+                {
+                    fireList.Add(new Fire(fireList[i].GetPosX(), fireList[i].GetPosY()));
+                    fireList.Remove(fireList[i]);
+                }
+            }
+        }
+
+        private static void BurnWithTheSamePosition(List<GameObject> fireList, int i)
+        {
+            if (fireList[i] is Box || fireList[i] is Bomb || fireList[i] is Character || fireList[i] is Powerups)
+            {
+                if (fireList[i] is Box box1)
+                {
+                    if (box1.RandomDrop() <= box1.GetChanceToDrop())
+                    {
+                        fireList.Add(box1.TrySpawnPowerup());
+                    }
+                    fireList.Remove(box1);
+
+                }
+                else if (fireList[i] is Bomb bomb1)
+                {
+                    bomb1.SetTimeToZero();
+                }
+                else if (fireList[i] is Character)
+                {
+                    fireList.Add(new Fire(fireList[i].GetPosX(), fireList[i].GetPosY()));
+                    fireList.Remove(fireList[i]);
+                }
+                else if (fireList[i] is Powerups powerups1)
+                {
+                    if (powerups1.GetIndestructible() <= 0)
+                    {
+                        fireList.Remove(fireList[i]);
+                    }
+                }
+                else
+                {
                     fireList.Remove(fireList[i]);
                 }
             }

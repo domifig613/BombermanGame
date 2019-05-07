@@ -4,9 +4,9 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 
-namespace ProjektPK4.Content
+namespace ProjektPK4.game
 {
-    public static class Map
+    static class Map
     {
         static Random rnd = new Random();
 
@@ -14,55 +14,89 @@ namespace ProjektPK4.Content
         static private Texture2D MiddleRockTexture;//Rock2 texture
         static private Texture2D BoxTexture;//Box texture
         static private Texture2D BoxWithBetterDropTexture;//premium box texture
-        static private List<Texture2D> BombTextures = new List<Texture2D>();//bomb texture
-        static private List<Texture2D> FireTextures = new List<Texture2D>();
-        static private List<List<Texture2D>> PowerupsTextures = new List<List<Texture2D>>();
+        static private List<Texture2D> BombTextures;//bomb texture
+        static private List<Texture2D> FireTextures;
+        static private List<List<Texture2D>> PowerupsTextures;
+        static private List<List<List<Texture2D>>> CharacterTextures;
+        static private List<Character> Player;
 
-        static private List<Player> Player = new List<Player>();
-
-        static private List<GameObject> ObjectToDraw = new List<GameObject>();
+        static private List<GameObject> ObjectToDraw;
 
         static Map()
         {
-            for (int i = 0; i < 4; i++)//powerups type(4)
-            {
-                PowerupsTextures.Add(new List<Texture2D>());
-            }
+            BombTextures = new List<Texture2D>();
+            FireTextures = new List<Texture2D>();
+            PowerupsTextures = new List<List<Texture2D>>();
+            CharacterTextures = new List<List<List<Texture2D>>>();
+
+            texturesPowerupsAndPlayersAdd();
+
+
+            CreateOrResetMap();
+           
+        }
+
+       
+        static private void CreateOrResetMap()
+        {
+
+            Player = new List<Character>();
+            ObjectToDraw = new List<GameObject>();
 
             for (int i = 0; i < ProgramParameters.WindowWidth / ProgramParameters.OneAreaWidth; i++)//up down wall
             {
-                ObjectToDraw.Add(new GameObject(ProgramParameters.OneAreaWidth * i, 0, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade));//up wall                                                                                                                                      
-                ObjectToDraw.Add(new GameObject(ProgramParameters.OneAreaWidth * i, ProgramParameters.WindowHeight - ProgramParameters.OneAreaHeight - ProgramParameters.AreaYShade, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade));   //down wall
+                ObjectToDraw.Add(new GameObject(ProgramParameters.OneAreaWidth * i, 0));//up wall                                                                                                                                      
+                ObjectToDraw.Add(new GameObject(ProgramParameters.OneAreaWidth * i, ProgramParameters.WindowHeight - ProgramParameters.OneAreaHeight - ProgramParameters.AreaYShade));   //down wall
             }
 
             for (int i = 0; i < ProgramParameters.WindowHeight / ProgramParameters.OneAreaHeight - 1; i++)//left right wall
             {
-                ObjectToDraw.Add(new GameObject(0, ProgramParameters.OneAreaHeight * i, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade));//left wall;
-                ObjectToDraw.Add(new GameObject(ProgramParameters.WindowWidth - ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight * i, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade));//right wall
+                ObjectToDraw.Add(new GameObject(0, ProgramParameters.OneAreaHeight * i));//left wall;
+                ObjectToDraw.Add(new GameObject(ProgramParameters.WindowWidth - ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight * i));//right wall
             }
 
             for (int i = 0; i < ProgramParameters.WindowWidth / ProgramParameters.OneAreaWidth / 2 - 1; i++)//middle rock
             {
                 for (int j = 0; j < ProgramParameters.WindowHeight / ProgramParameters.OneAreaHeight / 2 - 1; j++)
                 {
-                    ObjectToDraw.Add(new GameObject(((i * 2) + 2) * ProgramParameters.OneAreaWidth, ((j * 2) + 2) * ProgramParameters.OneAreaHeight, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade));
+                    ObjectToDraw.Add(new GameObject(((i * 2) + 2) * ProgramParameters.OneAreaWidth, ((j * 2) + 2) * ProgramParameters.OneAreaHeight));
                 }
             }
 
             AddBoxes();
             AddPremiumBoxes();
 
-            Player.Add(new Player(ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade, ProgramParameters.CharacterSlowerAnimation, Keys.Up, Keys.Down, Keys.Left, Keys.Right, Keys.P));
-            Player.Add(new Player(ProgramParameters.WindowWidth - 2*ProgramParameters.OneAreaWidth, ProgramParameters.WindowHeight - (2 * ProgramParameters.OneAreaHeight+ProgramParameters.AreaYShade), ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade, ProgramParameters.CharacterSlowerAnimation, Keys.W, Keys.S, Keys.A, Keys.D, Keys.V));
-            Player.Add(new Player(ProgramParameters.OneAreaWidth, ProgramParameters.WindowHeight - (2 * ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade), ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade, ProgramParameters.CharacterSlowerAnimation, Keys.W, Keys.S, Keys.A, Keys.D, Keys.V));
-            Player.Add(new Player(ProgramParameters.WindowWidth - 2 * ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade, ProgramParameters.CharacterSlowerAnimation, Keys.W, Keys.S, Keys.A, Keys.D, Keys.V));
+            Player.Add(new Player(ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight, Keys.Up, Keys.Down, Keys.Left, Keys.Right, Keys.Space, 1));
+            Player.Add(new Player(ProgramParameters.WindowWidth - 2 * ProgramParameters.OneAreaWidth, ProgramParameters.WindowHeight - (2 * ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade), Keys.W, Keys.S, Keys.A, Keys.D, Keys.C, 2));
+            Player.Add(new Player(ProgramParameters.OneAreaWidth, ProgramParameters.WindowHeight - (2 * ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade), Keys.Y, Keys.H, Keys.G, Keys.J, Keys.O, 3));
+            Player.Add(new Player(ProgramParameters.WindowWidth - 2 * ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaWidth, Keys.NumPad8, Keys.NumPad5, Keys.NumPad4, Keys.NumPad6, Keys.NumPad0, 4));
 
 
-            for(int i=0; i<4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 ObjectToDraw.Add(Player[i]);
             }
             SortObjectToDraw();
+
+        }
+
+        private static void texturesPowerupsAndPlayersAdd()
+        {
+            for (int i = 0; i < 4; i++)//powerups type(4)
+            {
+                PowerupsTextures.Add(new List<Texture2D>());
+            }
+            
+            for(int i=0; i<4; i++)
+            {
+                CharacterTextures.Add(new List<List<Texture2D>>());
+
+                for (int j = 0; j < 3; j++)
+                {
+                    CharacterTextures[i].Add(new List<Texture2D>());
+                }
+            }
+       
         }
 
         static private void AddPremiumBoxes()
@@ -80,7 +114,7 @@ namespace ProjektPK4.Content
                 }
                 while (CheckBoxPos(RandPosX, RandPosY));
 
-                ObjectToDraw.Add(new Box(RandPosX, RandPosY, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade, 90));
+                ObjectToDraw.Add(new Box(RandPosX, RandPosY, 90));
             }
         }
 
@@ -99,7 +133,7 @@ namespace ProjektPK4.Content
                 }
                 while (CheckBoxPos(RandPosX, RandPosY));
 
-                ObjectToDraw.Add(new Box(RandPosX, RandPosY, ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight + ProgramParameters.AreaYShade, 25));
+                ObjectToDraw.Add(new Box(RandPosX, RandPosY, 25));
             }
         }
 
@@ -164,8 +198,23 @@ namespace ProjektPK4.Content
 
         static public void LoadTexturePlayer(Texture2D texture, int x, int y, int CharacterNumber)
         {
-            Player[CharacterNumber].SetTexture(texture, x, y);
+            CharacterTextures[CharacterNumber][x].Add(texture);
+          // Player[CharacterNumber].SetTexture(texture, x, y);
         }//one time at start load texture
+
+        static public void AddTextureToPlayer()
+        {
+            for(int i=0;i<4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    for (int k = 0; k < 4; k++)
+                    {
+                        Player[i].SetTexture(CharacterTextures[i][j][k], j, k);
+                    }
+                }
+            }
+        }
 
         static public void DrawMap(SpriteBatch Batch)
         {
@@ -202,9 +251,9 @@ namespace ProjektPK4.Content
                 }
                 else if (object1 is Powerups powerups1)
                 {
-                    if (powerups1.getIndestructible() <= 0)
+                    if (powerups1.GetIndestructible() <= 0)
                     {
-                        Batch.Draw(PowerupsTextures[powerups1.getTypePowerups() - 1][powerups1.getNumberTexture()], object1.GetRectangle(), Color.White);
+                        Batch.Draw(PowerupsTextures[powerups1.GetTypePowerups() - 1][powerups1.GetNumberTexture()], object1.GetRectangle(), Color.White);
                     }
                 }
                 else
@@ -250,12 +299,26 @@ namespace ProjektPK4.Content
             AddToTemporaryList(ref TemporaryListFire, ref TemporaryListPowerups);//take powerups and fire from objectToDraw
             CheckBurnObject(ref TemporaryListFire, ref TemporaryListPowerups);//fire objectToDraw or powerups if colision
 
-            ShortDelayBomb();
             PutBomb();//if player press key to put bomb
             Move();
 
             TryPickPowerUp(ref TemporaryListPowerups);//check player position and powerups and try pick powerups
             RemoveFromTemporaryList(ref TemporaryListFire, ref TemporaryListPowerups); // put back powerups and fire to objectToDraw
+
+            CheckWinCondition();
+        }
+
+        private static void CheckWinCondition()
+        {
+           if(Player.Count==1)
+            {
+                Scorebar.AddScore(Player[0].PlayerNumber);
+            }
+           if(Player.Count<=1)
+            {
+                CreateOrResetMap();
+                AddTextureToPlayer();
+            }
         }
 
         static private void Move()
@@ -266,23 +329,14 @@ namespace ProjektPK4.Content
             }
         }
 
-        static private void ShortDelayBomb()
-        {
-            foreach (Player Player1 in Player)
-            {
-                Player1.shortenTheDelay();//Player shorten time to put bomb
-            }
-        }
-
         static private void TryPickPowerUp(ref List<GameObject> powerups)
         {
             foreach (Character character1 in Player)
             {
                 for (int i = powerups.Count - 1; i >= 0; i--)
                 {
-                    if (powerups[i].chceckColision(character1.GetPosX(), character1.GetRectangle().Width + character1.GetPosX(),
-                        character1.GetPosY(), character1.GetRectangle().Height + character1.GetPosY() - ProgramParameters.AreaYShade, ProgramParameters.AreaYShade))
-                    {
+                    if (powerups[i].ChceckColision(character1.GetPosX(), character1.GetPosY()))
+                    { 
                         Powerups powerup1 = (Powerups)powerups[i];
                         powerup1.AddPower(character1);
                         powerups.Remove(powerups[i]);
@@ -329,6 +383,24 @@ namespace ProjektPK4.Content
                 fire1.BurnObject(ref ObjectToDraw, ProgramParameters.AreaYShade);
                 fire1.BurnObject(ref powerups, ProgramParameters.AreaYShade);
             }
+            FindBurnedPlayers();
+        }
+
+        static private void FindBurnedPlayers()
+        {
+            for(int i=Player.Count-1; i>=0; i--)
+            {
+                Player.Remove(Player[i]);
+            }
+             
+            for(int i=ObjectToDraw.Count-1; i>=0; i--)
+            {
+                if(ObjectToDraw[i] is Character character1)
+                {
+                    Player.Add(character1);
+                }
+            }
+
         }
 
         static private void ChceckTimerObjects()
@@ -345,9 +417,9 @@ namespace ProjektPK4.Content
                 }
                 else if(ObjectToDraw[i] is Powerups powerups1)
                 {
-                    if (powerups1.getIndestructible() <= 0)
+                    if (powerups1.GetIndestructible() <= 0)
                     {
-                        powerups1.setNextTexture(PowerupsTextures[powerups1.getTypePowerups()-1].Count);
+                        powerups1.SetNextTexture(PowerupsTextures[powerups1.GetTypePowerups()-1].Count);
                     }
                     else
                     {
@@ -366,6 +438,11 @@ namespace ProjektPK4.Content
                         DestroyBomb(i, bomb1);
                     }
                 }
+            }
+
+            foreach (Player Player1 in Player)
+            {
+                Player1.ShortenTheDelay();//Player shorten time to put bomb
             }
         }
 
@@ -398,7 +475,7 @@ namespace ProjektPK4.Content
         {
             foreach (Player player1 in Player)
             {
-                if (Keyboard.GetState().IsKeyDown(player1.GetKey(4)) && player1.actuallDelayBomb == 0)
+                if (Keyboard.GetState().IsKeyDown(player1.GetKey(4)) && player1.ActuallDelayBomb == 0)
                 {
                     ObjectToDraw.Add(player1.PutBomb(ProgramParameters.OneAreaWidth, ProgramParameters.OneAreaHeight, ProgramParameters.AreaYShade));
                 }
@@ -432,14 +509,14 @@ namespace ProjektPK4.Content
             int distance = Player.GetPosY() - (closerObject.GetPosY() + ProgramParameters.OneAreaHeight);
 
             if (control != 0 && 
-               ( Player.GetPosY()-Player.Speed + ProgramParameters.OneAreaHeight <= FindObjectWithLowerX(Player.GetPosX(), Player.GetPosY()).GetPosY() && Keyboard.GetState().IsKeyDown(Player.GetKey(2))
-                || Player.GetPosY() - Player.Speed + ProgramParameters.OneAreaHeight <= FindObjectWithHigherX(Player.GetPosX(), Player.GetPosY()).GetPosY()&& Keyboard.GetState().IsKeyDown(Player.GetKey(3))))
+               ( Player.GetPosY()-Player.getSpeed() + ProgramParameters.OneAreaHeight <= FindObjectWithLowerX(Player.GetPosX(), Player.GetPosY()).GetPosY() && Keyboard.GetState().IsKeyDown(Player.GetKey(2))
+                || Player.GetPosY() - Player.getSpeed() + ProgramParameters.OneAreaHeight <= FindObjectWithHigherX(Player.GetPosX(), Player.GetPosY()).GetPosY()&& Keyboard.GetState().IsKeyDown(Player.GetKey(3))))
             {
                 Player.MoveCharacter(0, -1, 3);
             }
-            else if (distance > Player.Speed)
+            else if (distance > Player.getSpeed())
             {
-                Player.MoveCharacter(0, -Player.Speed, 0);
+                Player.MoveCharacter(0, -Player.getSpeed(), 0);
             }
             else if (distance > 0)
             {
@@ -456,14 +533,14 @@ namespace ProjektPK4.Content
             int distance = closerObject.GetPosY() - (Player.GetPosY() + ProgramParameters.OneAreaHeight);
 
             if (control != 0 &&
-                (Player.GetPosY() + Player.Speed - ProgramParameters.OneAreaHeight >= FindObjectWithLowerX(Player.GetPosX(), Player.GetPosY()).GetPosY() && Keyboard.GetState().IsKeyDown(Player.GetKey(2))
-                || Player.GetPosY() + Player.Speed - ProgramParameters.OneAreaHeight >= FindObjectWithHigherX(Player.GetPosX(), Player.GetPosY()).GetPosY() && Keyboard.GetState().IsKeyDown(Player.GetKey(3))))
+                (Player.GetPosY() + Player.getSpeed() - ProgramParameters.OneAreaHeight >= FindObjectWithLowerX(Player.GetPosX(), Player.GetPosY()).GetPosY() && Keyboard.GetState().IsKeyDown(Player.GetKey(2))
+                || Player.GetPosY() + Player.getSpeed() - ProgramParameters.OneAreaHeight >= FindObjectWithHigherX(Player.GetPosX(), Player.GetPosY()).GetPosY() && Keyboard.GetState().IsKeyDown(Player.GetKey(3))))
             {
                 Player.MoveCharacter(0, 1, 3);
             }
-            else if (distance > Player.Speed)
+            else if (distance > Player.getSpeed())
             {
-                Player.MoveCharacter(0, Player.Speed, 3);
+                Player.MoveCharacter(0, Player.getSpeed(), 3);
             }
             else if (distance > 0)
             {
@@ -480,14 +557,14 @@ namespace ProjektPK4.Content
             int distance = Player.GetPosX() - (closerObject.GetPosX() + ProgramParameters.OneAreaWidth);
 
             if (control != 0 &&
-                (Player.GetPosX() - Player.Speed + ProgramParameters.OneAreaWidth < FindObjectWithLowerY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(0))
-                || Player.GetPosX() - Player.Speed + ProgramParameters.OneAreaWidth < FindObjectWithHigherY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(1))))
+                (Player.GetPosX() - Player.getSpeed() + ProgramParameters.OneAreaWidth < FindObjectWithLowerY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(0))
+                || Player.GetPosX() - Player.getSpeed() + ProgramParameters.OneAreaWidth < FindObjectWithHigherY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(1))))
             {
                 Player.MoveCharacter(-1, 0, 3);
             }
-            else if (distance > Player.Speed)
+            else if (distance > Player.getSpeed())
             {
-                Player.MoveCharacter(-Player.Speed, 0, 6);
+                Player.MoveCharacter(-Player.getSpeed(), 0, 6);
             }
             else if (distance > 0)
             {
@@ -504,14 +581,14 @@ namespace ProjektPK4.Content
             int distance = closerObject.GetPosX() - (Player.GetPosX() + ProgramParameters.OneAreaWidth);
 
             if (control != 0 &&
-                (Player.GetPosX() + Player.Speed - ProgramParameters.OneAreaWidth > FindObjectWithLowerY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(0))
-                || Player.GetPosX() + Player.Speed - ProgramParameters.OneAreaWidth > FindObjectWithHigherY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(1))))
+                (Player.GetPosX() + Player.getSpeed() - ProgramParameters.OneAreaWidth > FindObjectWithLowerY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(0))
+                || Player.GetPosX() + Player.getSpeed() - ProgramParameters.OneAreaWidth > FindObjectWithHigherY(Player.GetPosX(), Player.GetPosY()).GetPosX() && Keyboard.GetState().IsKeyDown(Player.GetKey(1))))
             {
                 Player.MoveCharacter(1, 0, 3);
             }
-            else if (distance > Player.Speed)
+            else if (distance > Player.getSpeed())
             {
-                Player.MoveCharacter(Player.Speed, 0, 9);
+                Player.MoveCharacter(Player.getSpeed(), 0, 9);
             }
             else if (distance > 0)
             {
@@ -525,10 +602,10 @@ namespace ProjektPK4.Content
 
         static private GameObject FindObjectWithHigherX(int posX, int posY)
         {
-            GameObject objectReturn = new GameObject(ProgramParameters.WindowWidth, 0, 1, 1);
+            GameObject objectReturn = new GameObject(ProgramParameters.WindowWidth, 0);
             foreach (GameObject object1 in ObjectToDraw)
             {
-                if (object1.GetPosX() >= posX + ProgramParameters.OneAreaWidth && object1.GetPosX() <= objectReturn.GetPosX() && object1.CheckColisionHeight(posY, posY + ProgramParameters.OneAreaHeight, ProgramParameters.AreaYShade))
+                if (object1.GetPosX() >= posX + ProgramParameters.OneAreaWidth && object1.GetPosX() <= objectReturn.GetPosX() && object1.CheckColisionHeight(posY))
                 {
                     objectReturn = object1;
                 }
@@ -537,10 +614,10 @@ namespace ProjektPK4.Content
         } //3
         static private GameObject FindObjectWithLowerX(int posX, int posY)
         {
-            GameObject objectReturn = new GameObject(0, 0, 1, 1);
+            GameObject objectReturn = new GameObject(0, 0);
             foreach (GameObject object1 in ObjectToDraw)
             {
-                if (object1.GetPosX() + ProgramParameters.OneAreaWidth <= posX && object1.GetPosX() >= objectReturn.GetPosX() && object1.CheckColisionHeight(posY, posY + ProgramParameters.OneAreaHeight, ProgramParameters.AreaYShade))
+                if (object1.GetPosX() + ProgramParameters.OneAreaWidth <= posX && object1.GetPosX() >= objectReturn.GetPosX() && object1.CheckColisionHeight(posY))
                 {
                     objectReturn = object1;
                 }
@@ -549,10 +626,10 @@ namespace ProjektPK4.Content
         }
         static private GameObject FindObjectWithHigherY(int posX, int posY)
         {
-            GameObject objectReturn = new GameObject(0, ProgramParameters.WindowHeight, 1, 1);
+            GameObject objectReturn = new GameObject(0, ProgramParameters.WindowHeight);
             foreach (GameObject object1 in ObjectToDraw)
             {
-                if (object1.GetPosY() >= posY + ProgramParameters.OneAreaHeight && object1.GetPosY() <= objectReturn.GetPosY() && object1.CheckColisionWidth(posX, posX + ProgramParameters.OneAreaWidth))
+                if (object1.GetPosY() >= posY + ProgramParameters.OneAreaHeight && object1.GetPosY() <= objectReturn.GetPosY() && object1.CheckColisionWidth(posX))
                 {
                     objectReturn = object1;
                 }
@@ -561,10 +638,10 @@ namespace ProjektPK4.Content
         }
         static private GameObject FindObjectWithLowerY(int posX, int posY)
         {
-            GameObject objectReturn = new GameObject(0, 0, 1, 1);
+            GameObject objectReturn = new GameObject(0, 0);
             foreach (GameObject object1 in ObjectToDraw)
             {
-                if (object1.GetPosY() + ProgramParameters.OneAreaHeight <= posY && object1.GetPosY() >= objectReturn.GetPosY() && object1.CheckColisionWidth(posX, posX + ProgramParameters.OneAreaWidth))
+                if (object1.GetPosY() + ProgramParameters.OneAreaHeight <= posY && object1.GetPosY() >= objectReturn.GetPosY() && object1.CheckColisionWidth(posX))
                 {
                     objectReturn = object1;
                 }

@@ -4,25 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjektPK4.Content
+namespace ProjektPK4.game
 {
     class Powerups: GameObject
     {
         int indestructible;//cant destroy and pick frame
         int textureNumber = 0;
-        int frameWithOneTexture;
+        int FrameWithOneTexture { get; }
         int countTexture=0;
-        int type;//1 more bombs, 2 large area bomb, 3 speed, 4 indestructible for some frame
+        int Type { get; }//1 more bombs, 2 large area bomb, 3 speed, 4 indestructible for some frame
 
-        public Powerups(int _indestructibleTime,int _type, int _frameWithOneTexture, int posX, int posY, int Width, int height):base(posX, posY, Width, height)
+        public Powerups(int _indestructibleTime,int _type, int _frameWithOneTexture, int posX, int posY):base(posX, posY)
         {
-            frameWithOneTexture = _frameWithOneTexture;
+            FrameWithOneTexture = _frameWithOneTexture;
             indestructible = _indestructibleTime;
-            type = _type;
+            Type = _type;
         }
-        public void setNextTexture(int max)
+        public void SetNextTexture(int max)
         {
-            if(countTexture % frameWithOneTexture == 0)
+            if(countTexture % FrameWithOneTexture == 0)
             {
                 countTexture = 1;
                 if (textureNumber == max - 1)
@@ -40,17 +40,17 @@ namespace ProjektPK4.Content
             }
         }
 
-        public int getTypePowerups()
+        public int GetTypePowerups()
         {
-            return type;
+            return Type;
         }
 
-        public int getNumberTexture()
+        public int GetNumberTexture()
         {
             return textureNumber;
         }
 
-        public int getIndestructible()
+        public int GetIndestructible()
         {
             return indestructible;
         }
@@ -63,7 +63,7 @@ namespace ProjektPK4.Content
         }
         public void AddPower(Character player)
         {
-            switch (type)
+            switch (Type)
             {
                 case 1:
                     player.ShortenMaxDelayBettwenPutBomb();

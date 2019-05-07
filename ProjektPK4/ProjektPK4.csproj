@@ -59,19 +59,19 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Content\Bomb.cs" />
-    <Compile Include="Content\Box.cs" />
-    <Compile Include="Content\Character.cs" />
-    <Compile Include="Content\Fire.cs" />
-    <Compile Include="Content\GameObject.cs" />
-    <Compile Include="Content\Map.cs" />
-    <Compile Include="Content\Player.cs" />
-    <Compile Include="Content\Powerups.cs" />
-    <Compile Include="Content\ProgramParameters.cs" />
+    <Compile Include="game\Bomb.cs" />
+    <Compile Include="game\Box.cs" />
+    <Compile Include="game\Character.cs" />
+    <Compile Include="game\Fire.cs" />
+    <Compile Include="game\GameObject.cs" />
+    <Compile Include="game\Map.cs" />
+    <Compile Include="game\Player.cs" />
+    <Compile Include="game\Powerups.cs" />
+    <Compile Include="game\ProgramParameters.cs" />
     <Compile Include="CoreGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scorebar.cs" />
+    <Compile Include="game\Scorebar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
