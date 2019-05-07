@@ -104,7 +104,7 @@ namespace ProjektPK4.game
 
         static public void AddScore(int playerNumber)
         {
-            playersWin[playerNumber]++;
+            playersWin[playerNumber-1]++;
         }
     }
 }
