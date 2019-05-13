@@ -3,7 +3,11 @@
   <SourceFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/headScore3.png</SourceFile>
   <SourceTime>2019-05-05T17:04:46.9832546+02:00</SourceTime>
   <DestFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/bin/Windows/Content/Sprites/headScore3.xnb</DestFile>
+<<<<<<< HEAD
   <DestTime>2019-05-13T23:42:38.3552531+02:00</DestTime>
+=======
+  <DestTime>2019-05-06T18:38:21.4186709+02:00</DestTime>
+>>>>>>> parent of 12b1794... fix bug
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

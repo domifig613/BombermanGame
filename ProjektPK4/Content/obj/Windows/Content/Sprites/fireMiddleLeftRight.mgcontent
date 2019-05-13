@@ -3,7 +3,11 @@
   <SourceFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/fireMiddleLeftRight.png</SourceFile>
   <SourceTime>2019-04-26T09:40:04.5266408+02:00</SourceTime>
   <DestFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/bin/Windows/Content/Sprites/fireMiddleLeftRight.xnb</DestFile>
+<<<<<<< HEAD
   <DestTime>2019-05-13T23:42:38.2435169+02:00</DestTime>
+=======
+  <DestTime>2019-05-06T18:38:21.2555219+02:00</DestTime>
+>>>>>>> parent of 12b1794... fix bug
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
