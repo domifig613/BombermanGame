@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/Sprites/PowerupsStar11.png</SourceFile>
-  <SourceTime>2019-05-06T08:40:49.8724705+02:00</SourceTime>
-  <DestFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/bin/Windows/Content/Sprites/PowerupsStar11.xnb</DestFile>
-  <DestTime>2019-05-07T08:47:19.4213712+02:00</DestTime>
+  <SourceFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/Sprites/PowerupsStar11.png</SourceFile>
+  <SourceTime>2019-05-01T09:17:00+02:00</SourceTime>
+  <DestFile>C:/Users/domin/Documents/Visual Studio Projects/BombermanGame/ProjektPK4/Content/bin/Windows/Content/Sprites/PowerupsStar11.xnb</DestFile>
+  <DestTime>2019-05-13T23:42:39.1968517+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

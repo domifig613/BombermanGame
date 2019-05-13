@@ -14,7 +14,7 @@ namespace ProjektPK4
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;//help draw textures
-        int gameState = 0;//0-start, 1-chose characters, 2- game, 3-end screen
+
 
         public CoreGame()
         {
@@ -38,7 +38,7 @@ namespace ProjektPK4
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            LoadMapAndCharactersTextures();
+            LoadTexturesToMap();
             LoadTexturesToScoreBar();
         }
 
@@ -49,17 +49,15 @@ namespace ProjektPK4
             {
                 string name = "Sprites\\headScore" + i;
                 characterHead[i-1] = Content.Load<Texture2D>(name);
-                GameTextures.AddTexture(characterHead[i - 1]);
             }
 
-            GameTextures.AddTexture(Content.Load<Texture2D>("Sprites\\chest"));
-            GameTextures.AddTexture(Content.Load<Texture2D>("Sprites\\chestBack"));
-            GameTextures.AddTexture(new Texture2D(GraphicsDevice, 1, 1));
-
+            Scorebar.LoadScoreboardTextures(characterHead,Content.Load<Texture2D>("Sprites\\chest"), Content.Load<Texture2D>("Sprites\\chestBack"), new Texture2D(GraphicsDevice, 1, 1));
         }
 
-        private void LoadMapAndCharactersTextures()
+        private void LoadTexturesToMap()
         {
+            
+
             string[] textureNameArray = { "End1", "Rock1", "Box1", "Box2", "Bomb1", "Bomb2",
                 "Bomb3", "Bomb4" ,"Bomb5","Bomb6","Bomb7","Bomb8","Bomb9","Bomb10","Bomb11",
                 "Bomb12","Bomb13","fireNormalStart","fireMiddleLeftRight","fireMiddleUpDown",
@@ -67,48 +65,66 @@ namespace ProjektPK4
                 "fireStartUp1","fireStartLeft1","fireStartRight1","fireStartDownLeft2",
                 "fireStartDownRight2","fireStartUpLeft2","fireStartUpRight2", "DeadFire"};
 
-            string name;
-
-            for (int i=0; i<textureNameArray.Length; i++)
+            string name = "Sprites\\" + textureNameArray[0];
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 0);
+            name = "Sprites\\" + textureNameArray[1];
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 1);
+            name = "Sprites\\" + textureNameArray[2];
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 2);
+            name = "Sprites\\" + textureNameArray[3];
+            Map.LoadTextureMap(Content.Load<Texture2D>(name), 3);
+            
+            for(int i=0; i<13; i++)
             {
-                name = "Sprites\\";
-                GameTextures.AddTexture(Content.Load<Texture2D>(name + textureNameArray[i]));
+                name = "Sprites\\" + textureNameArray[i+4];
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 4);
             }
 
-
-            string[] arrayFire = new string[16];
-
-            int h = 0;
-            for(int i=textureNameArray.Length-16; i<textureNameArray.Length; i++,h++)
+            for(int i=0; i<16; i++)
             {
-                arrayFire[h] = textureNameArray[i];
+                name = "Sprites\\" + textureNameArray[i + 17];
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 5);
             }
 
-            Map.setFireTextureName(arrayFire);
+            for (int i = 1; i <= 18; i++)
+            {
+                name = "Sprites\\" + "PowerupsBomb" + i.ToString();
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 6);
+            }
 
-            string[] mapArray = { "End1", "Rock1", "Box1", "Box2" };
+            for (int i = 1; i <= 16; i++)
+            {
+                name = "Sprites\\" + "PowerupsLighting" + i.ToString();
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 7);
+            }
 
-            Map.setTextureName(mapArray);
+            for (int i = 1; i <= 17; i++)
+            {
+                name = "Sprites\\" + "PowerupsPotion" + i.ToString();
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 8);
+            }
 
-            string[] powerupsName = { "PowerupsBomb", "PowerupsLighting", "PowerupsPotion", "PowerupsStar" };
+            for (int i = 1; i <= 15; i++)
+            {
+                name = "Sprites\\" + "PowerupsStar" + i.ToString();
+                Map.LoadTextureMap(Content.Load<Texture2D>(name), 9);
+            }
 
-            int[] _lenghtPowerupsTexture = { 18, 16, 17, 15 };
+            LoadCharacterTexture();
+            Map.AddTextureToPlayer();
+        }
 
-            Map.setPowerupsTextureName(powerupsName, _lenghtPowerupsTexture);
-
-
-
-
+        private void LoadCharacterTexture()
+        {
             string[] array = { "Up", "Down", "Left", "Right" };
-
             for (int k = 1; k <= 4; k++)
             {
                 for (int i = 0; i < 3; i++)
                 {
                     for (int j = 0; j < 4; j++)
                     {
-                        string control = "Sprites\\Pirate" + k + array[j] + (i + 1);
-                        GameTextures.AddTexture(Content.Load<Texture2D>(control));
+                        string control = "Sprites\\Pirate"+ k + array[j] + (i + 1);
+                        Map.LoadTexturePlayer(Content.Load<Texture2D>(control), i, j, k-1);
                     }
                 }
             }
@@ -131,21 +147,12 @@ namespace ProjektPK4
 
         protected override void Draw(GameTime gameTime) //draw
         {
+            GraphicsDevice.Clear(Color.BurlyWood);
 
             spriteBatch.Begin();
             // draw here
-
-
-            if(gameState == 0)
-            {
-
-            }
-            else if (gameState == 2)
-            {
-                GraphicsDevice.Clear(Color.BurlyWood);
-                Scorebar.DrawScorebar(spriteBatch);
-                Map.DrawMap(spriteBatch);
-            }
+            Scorebar.DrawScorebar(spriteBatch);
+            Map.DrawMap(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);
