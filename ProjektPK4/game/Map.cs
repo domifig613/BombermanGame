@@ -10,33 +10,54 @@ namespace ProjektPK4.game
     {
         static Random rnd = new Random();
 
-        static private Texture2D RockTexture;//Rock texture
-        static private Texture2D MiddleRockTexture;//Rock2 texture
-        static private Texture2D BoxTexture;//Box texture
-        static private Texture2D BoxWithBetterDropTexture;//premium box texture
-        static private List<Texture2D> BombTextures;//bomb texture
-        static private List<Texture2D> FireTextures;
-        static private List<List<Texture2D>> PowerupsTextures;
-        static private List<List<List<Texture2D>>> CharacterTextures;
+        static private string[] TextureName;//0-end, 1-rock, 2-box, 3-better box
+        static private string[] FireTextureName;
+        static private string[][] PowerupsTextureName;
         static private List<Character> Player;
 
         static private List<GameObject> ObjectToDraw;
 
         static Map()
         {
-            BombTextures = new List<Texture2D>();
-            FireTextures = new List<Texture2D>();
-            PowerupsTextures = new List<List<Texture2D>>();
-            CharacterTextures = new List<List<List<Texture2D>>>();
-
-            texturesPowerupsAndPlayersAdd();
-
-
-            CreateOrResetMap();
-           
+            CreateOrResetMap();  
         }
 
+        static public void setFireTextureName(string[] array)
+        {
+            FireTextureName= new string[array.Length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+               FireTextureName[i] = array[i];
+            }
+        }
        
+        static public void setTextureName(string[] array)
+        {
+            TextureName = new string[array.Length];
+            
+            for(int i=0; i<array.Length; i++)
+            {
+                TextureName[i] = array[i];
+            }
+        }
+
+        static public void setPowerupsTextureName(string[] array, int[] _lenght)
+        {
+            PowerupsTextureName = new string[array.Length][];
+
+            for(int i=0; i<array.Length; i++)
+            {
+                PowerupsTextureName[i] = new string[_lenght[i]];
+
+                for(int j=0; j<_lenght[i]; j++)
+                {
+                    PowerupsTextureName[i][j] = array[i] + j.ToString();
+                }
+            }
+        }
+
+
         static private void CreateOrResetMap()
         {
 
@@ -78,25 +99,6 @@ namespace ProjektPK4.game
             }
             SortObjectToDraw();
 
-        }
-
-        private static void texturesPowerupsAndPlayersAdd()
-        {
-            for (int i = 0; i < 4; i++)//powerups type(4)
-            {
-                PowerupsTextures.Add(new List<Texture2D>());
-            }
-            
-            for(int i=0; i<4; i++)
-            {
-                CharacterTextures.Add(new List<List<Texture2D>>());
-
-                for (int j = 0; j < 3; j++)
-                {
-                    CharacterTextures[i].Add(new List<Texture2D>());
-                }
-            }
-       
         }
 
         static private void AddPremiumBoxes()
@@ -157,65 +159,6 @@ namespace ProjektPK4.game
             return false;
         }
 
-        static public void LoadTextureMap(Texture2D texture, int control)//0 rock, 1 middle rock, 2 box, rock default;
-        {
-            switch (control)
-            {
-                case 0:
-                    RockTexture = texture;
-                    break;
-                case 1:
-                    MiddleRockTexture = texture;
-                    break;
-                case 2:
-                    BoxTexture = texture;
-                    break;
-                case 3:
-                    BoxWithBetterDropTexture = texture;
-                    break;
-                case 4:
-                    BombTextures.Add(texture);
-                    break;
-                case 5:
-                    FireTextures.Add(texture);
-                    break;
-                case 6:
-                    PowerupsTextures[0].Add(texture);
-                    break;
-                case 7:
-                    PowerupsTextures[1].Add(texture);
-                    break;
-                case 8:
-                    PowerupsTextures[2].Add(texture);
-                    break;
-                case 9:
-                    PowerupsTextures[3].Add(texture);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        static public void LoadTexturePlayer(Texture2D texture, int x, int y, int CharacterNumber)
-        {
-            CharacterTextures[CharacterNumber][x].Add(texture);
-          // Player[CharacterNumber].SetTexture(texture, x, y);
-        }//one time at start load texture
-
-        static public void AddTextureToPlayer()
-        {
-            for(int i=0;i<4; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    for (int k = 0; k < 4; k++)
-                    {
-                        Player[i].SetTexture(CharacterTextures[i][j][k], j, k);
-                    }
-                }
-            }
-        }
-
         static public void DrawMap(SpriteBatch Batch)
         {
             foreach (GameObject object1 in ObjectToDraw)
@@ -224,12 +167,11 @@ namespace ProjektPK4.game
                 {
                     if (box1.GetChanceToDrop() == 90)
                     {
-                        Batch.Draw(BoxWithBetterDropTexture, object1.GetRectangle(), Color.White);
-
+                        Batch.Draw(GameTextures.GetTexture(TextureName[3]), object1.GetRectangle(), Color.White);
                     }
                     else
                     {
-                        Batch.Draw(BoxTexture, object1.GetRectangle(), Color.White);
+                        Batch.Draw(GameTextures.GetTexture(TextureName[2]), object1.GetRectangle(), Color.White);
                     }
                 }
                 else if (object1 is Player)
@@ -239,15 +181,15 @@ namespace ProjektPK4.game
                 }
                 else if (object1.GetPosX() >= ProgramParameters.WindowWidth - ProgramParameters.OneAreaWidth || object1.GetPosX() < ProgramParameters.OneAreaWidth || object1.GetPosY() >= ProgramParameters.WindowHeight - (ProgramParameters.OneAreaWidth + ProgramParameters.AreaYShade) || object1.GetPosY() < ProgramParameters.OneAreaHeight)
                 {
-                    Batch.Draw(RockTexture, object1.GetRectangle(), Color.White);
+                    Batch.Draw(GameTextures.GetTexture(TextureName[0]), object1.GetRectangle(), Color.White);
                 }
                 else if (object1 is Bomb bomb1)
                 {
-                    Batch.Draw(BombTextures[bomb1.GetTextureNumber()], object1.GetRectangle(), Color.White);
+                    Batch.Draw(GameTextures.GetTexture(bomb1.GetTexuteName() + bomb1.GetTextureNumber()), object1.GetRectangle(), Color.White);
                 }
                 else if (object1 is Fire fire1)
                 {
-                    Batch.Draw(FireTextures[fire1.GetTextureNumber()], object1.GetRectangle(), Color.White);
+                    Batch.Draw(GameTextures.GetTexture(FireTextureName[fire1.GetTextureNumber()]), object1.GetRectangle(), Color.White);
                 }
                 else if (object1 is Powerups powerups1)
                 {
@@ -258,7 +200,7 @@ namespace ProjektPK4.game
                 }
                 else
                 {
-                    Batch.Draw(MiddleRockTexture, object1.GetRectangle(), Color.White);
+                    Batch.Draw(GameTextures.GetTexture(TextureName[1]), object1.GetRectangle(), Color.White);
                 }
             }
         }
@@ -317,7 +259,6 @@ namespace ProjektPK4.game
            if(Player.Count<=1)
             {
                 CreateOrResetMap();
-                AddTextureToPlayer();
             }
         }
 

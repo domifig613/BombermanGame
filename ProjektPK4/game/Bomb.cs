@@ -13,6 +13,7 @@ namespace ProjektPK4.game
 {
     class Bomb : GameObject
     {
+        readonly private string textureName = "Bomb";
         readonly private int range;
         readonly private int maxTimeToDestroy = 120;
         private int timerToDestroy;//frame
@@ -62,6 +63,11 @@ namespace ProjektPK4.game
         public void SetNextTexture()
         {
             textureNumber++;
+        }
+
+        public string GetTexuteName()
+        {
+            return textureName;
         }
 
         ~Bomb()
