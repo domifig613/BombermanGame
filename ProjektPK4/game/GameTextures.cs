@@ -30,7 +30,10 @@ namespace ProjektPK4.game
         static public Texture2D GetTexture(string textureName)
         {
             Texture2D texture1 = null;
-            textureName = folderTexture + textureName;
+            if (textureName != "Empty")
+            {
+                textureName = folderTexture + textureName;
+            }
 
             foreach (Texture2D texture in Textures)
             {
