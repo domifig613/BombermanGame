@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/sound/menu.ogg</SourceFile>
+  <SourceTime>2019-05-30T10:26:33.8495896+02:00</SourceTime>
+  <DestFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/bin/Windows/Content/sound/menu.xnb</DestFile>
+  <DestTime>2019-06-06T18:16:51.8159033+02:00</DestTime>
+  <Importer>OggImporter</Importer>
+  <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2018-12-08T17:35:54+01:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/bin/Windows/Content/sound/menu.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

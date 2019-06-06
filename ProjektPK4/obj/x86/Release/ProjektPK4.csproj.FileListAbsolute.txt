@@ -1,133 +1,217 @@
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb10.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb11.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb12.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb13.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb4.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb5.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb6.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb7.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb8.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb9.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\box1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Box2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\DeadFire.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\End1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndDown.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndLeft.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndRight.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndUp.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireMiddleLeftRight.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireMiddleUpDown.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireNormalStart.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartDown1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartDownLeft2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartDownRight2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartLeft1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartRight1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartUp1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartUpLeft2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartUpRight2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Down1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Down2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Down3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Left1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Left2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Left3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Right1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Right2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Right3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Up1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Up2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Up3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb10.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb11.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb12.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb13.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb14.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb15.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb16.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb17.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb18.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb4.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb5.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb6.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb7.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb8.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb9.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting10.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting11.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting12.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting13.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting14.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting15.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting16.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting4.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting5.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting6.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting7.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting8.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting9.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion10.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion11.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion12.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion13.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion14.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion15.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion16.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion17.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion4.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion5.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion6.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion7.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion8.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion9.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar10.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar11.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar12.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar13.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar14.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar15.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar2.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar3.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar4.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar5.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar6.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar7.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar8.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar9.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Rock1.xnb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\ProjektPK4.exe
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\ProjektPK4.pdb
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\MonoGame.Framework.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.MediaFoundation.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XAudio2.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.DXGI.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct3D11.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct2D1.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XInput.dll
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\MonoGame.Framework.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.MediaFoundation.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XAudio2.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.DXGI.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct3D11.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct2D1.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XInput.xml
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.csproj.CoreCompileInputs.cache
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.csproj.CopyComplete
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.exe
-C:\Users\domin\Documents\Visual Studio Projects\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.pdb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\BackButton.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb10.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb11.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb12.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb13.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb4.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb5.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb6.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb7.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb8.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Bomb9.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\box1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Box2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\chest.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\chestBack.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Computer.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Cursor1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\DeadFire.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Disable.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\End1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\ExitButton.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndDown.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndLeft.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndRight.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireEndUp.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireMiddleLeftRight.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireMiddleUpDown.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireNormalStart.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartDown1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartDownLeft2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartDownRight2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartLeft1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartRight1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartUp1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartUpLeft2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\fireStartUpRight2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\GameOver.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\headScore1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\headScore2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\headScore3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\headScore4.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Keys1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Keys2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Keys3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Keys4.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\LeftClickButton.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Menu1Back.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\MusicOff.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\MusicOn.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Down1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Down2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Down3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Left1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Left2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Left3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Right1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Right2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Right3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Up1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Up2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate1Up3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Down1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Down2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Down3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Left1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Left2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Left3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Right1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Right2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Right3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Up1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Up2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate2Up3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Down1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Down2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Down3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Left1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Left2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Left3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Right1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Right2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Right3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Up1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Up2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate3Up3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Down1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Down2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Down3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Left1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Left2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Left3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Right1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Right2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Right3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Up1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Up2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate4Up3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Down1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Down2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Down3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Left1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Left2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Left3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Right1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Right2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Right3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Up1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Up2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Pirate5Up3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PirateBomberman.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PlayButton.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Player.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb10.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb11.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb12.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb13.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb14.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb15.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb16.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb17.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb18.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb4.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb5.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb6.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb7.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb8.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsBomb9.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting10.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting11.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting12.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting13.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting14.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting15.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting16.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting4.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting5.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting6.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting7.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting8.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsLighting9.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion10.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion11.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion12.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion13.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion14.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion15.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion16.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion17.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion4.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion5.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion6.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion7.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion8.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsPotion9.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar10.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar11.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar12.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar13.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar14.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar15.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar2.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar3.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar4.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar5.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar6.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar7.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar8.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\PowerupsStar9.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\QuitButton.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\RightClickButton.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\Rock1.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\SelectCharacters.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\Sprites\StartButton.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\sound\button.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\sound\explosiv.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\sound\game.wma
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\sound\game.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\sound\menu.wma
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\sound\menu.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\Content\sound\powerup.xnb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\ProjektPK4.exe.config
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\ProjektPK4.exe
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\ProjektPK4.pdb
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\MonoGame.Framework.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.MediaFoundation.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XAudio2.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.DXGI.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct3D11.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct2D1.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XInput.dll
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\MonoGame.Framework.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.MediaFoundation.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XAudio2.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.DXGI.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct3D11.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.Direct2D1.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\bin\Windows\x86\Release\SharpDX.XInput.xml
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.csprojAssemblyReference.cache
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.csproj.CoreCompileInputs.cache
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.csproj.CopyComplete
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.exe
+D:\Users\domin\repos\repos\ProjektPK4\79aab1eb-gr42-repo\Projekt\BombermanGame\ProjektPK4\obj\x86\Release\ProjektPK4.pdb

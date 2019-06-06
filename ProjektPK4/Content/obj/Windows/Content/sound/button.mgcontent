@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/sound/button.wav</SourceFile>
+  <SourceTime>2019-05-26T09:20:06.1147179+02:00</SourceTime>
+  <DestFile>D:/Users/domin/repos/repos/ProjektPK4/BombermanGame/ProjektPK4/Content/bin/Windows/Content/sound/button.xnb</DestFile>
+  <DestTime>2019-06-06T18:16:50.1049608+02:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-12-08T17:35:54+01:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
